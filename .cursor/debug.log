@@ -1,0 +1,4 @@
+{"location":"Navbar.tsx:14","message":"Navbar component rendering","data":{"hasLegacyBehavior":true},"timestamp":1767963514578,"sessionId":"debug-session","runId":"pre-fix","hypothesisId":"A"}
+{"location":"Navbar.tsx:31","message":"Rendering HOME link with legacyBehavior","data":{"href":"/","usingLegacyBehavior":true},"timestamp":1767963514579,"sessionId":"debug-session","runId":"pre-fix","hypothesisId":"A"}
+{"location":"Navbar.tsx:14","message":"Navbar component rendering","data":{"hasLegacyBehavior":true},"timestamp":1767963514579,"sessionId":"debug-session","runId":"pre-fix","hypothesisId":"A"}
+{"location":"Navbar.tsx:31","message":"Rendering HOME link with legacyBehavior","data":{"href":"/","usingLegacyBehavior":true},"timestamp":1767963514580,"sessionId":"debug-session","runId":"pre-fix","hypothesisId":"A"}
