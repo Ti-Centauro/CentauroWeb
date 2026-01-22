@@ -1,0 +1,92 @@
+"use client";
+
+import { useEffect, useState, useRef } from "react";
+
+// Seus dados (removi o duplicado que tinha na lista)
+const statsData = [
+  { value: 10000, label: "Pontos de Rede de Dados" },
+  { value: 15000, label: "Pontos de Câmeras CFTV" },
+  { value: 200, label: "KM de Cabos Ópticos" },
+  { value: 300, label: "Portas de Controle de Acesso" },
+  { value: 9500, label: "Pontos de Det. de Incêndio" },
+];
+
+// A Mágica da Animação
+function useCountUp(end: number, duration: number = 2000) {
+  const [count, setCount] = useState(0);
+  const elementRef = useRef<HTMLDivElement>(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  // Parte 1: Detecta quando aparece na tela
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect(); // Para de observar depois que viu
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (elementRef.current) {
+      observer.observe(elementRef.current);
+    }
+  }, []);
+
+  // Parte 2: Faz a contagem matemática
+  useEffect(() => {
+    if (!isVisible) return; // Só conta se estiver visível
+
+    let startTime: number | null = null;
+    const step = (timestamp: number) => {
+      if (!startTime) startTime = timestamp;
+      const progress = Math.min((timestamp - startTime) / duration, 1);
+      
+      // Efeito "eaeseOut": começa rápido e desacelera no final
+      const easeOut = progress === 1 ? 1 : 1 - Math.pow(2, -10 * progress);
+      
+      setCount(Math.floor(easeOut * end));
+
+      if (progress < 1) {
+        window.requestAnimationFrame(step);
+      }
+    };
+
+    window.requestAnimationFrame(step);
+  }, [end, duration, isVisible]);
+
+  return { count, elementRef };
+}
+
+// O Componente Visual
+export default function Stats() {
+  return (
+    <section className="bg-gray-50 py-15">
+      <div className="container mx-auto px-4">
+        <div className="grid grid-cols-3 md:grid-cols-3 lg:grid-cols-5 gap-6">
+          
+          {statsData.map((item, index) => {
+            // Chamamos a mágica para cada item!
+            // eslint-disable-next-line react-hooks/rules-of-hooks
+            const { count, elementRef } = useCountUp(item.value);
+
+            return (
+              <div key={index} ref={elementRef} className="flex flex-col items-center text-center group">
+                <span className="text-4xl md:text-4xl font-light text-gray-800 tabular-nums">
+                  + {count.toLocaleString("pt-BR")}
+                </span>
+                {/* Tracinho que fica vermelho quando passa o mouse */}
+                <div className="w-8 h-0.5 bg-gray-400 my-4 group-hover:w-35 group-hover:bg-red-700 transition-all duration-300" />
+                <span className="text-xs font-bold text-gray-500 uppercase tracking-widest">
+                  {item.label}
+                </span>
+              </div>
+            );
+          })}
+
+        </div>
+      </div>
+    </section>
+  );
+}

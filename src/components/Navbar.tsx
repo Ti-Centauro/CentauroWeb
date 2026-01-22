@@ -31,7 +31,7 @@ export default function Navbar() {
         </div>
 
         {/* Links de Navegação Centralizados com Dropdown */}
-        <div className="hidden md:flex items-center absolute left-1/2 transform -translate-x-1/2">
+        <div className="hidden md:flex items-center mr-4">
           <NavigationMenu>
             <NavigationMenuList>
               {/* Link simples - HOME */}
@@ -40,7 +40,7 @@ export default function Navbar() {
                   <Link
                     href="/"
                     className={cn(
-                      "group inline-flex h-9 w-max items-center justify-center  px-4 py-2 text-sm font-medium hover:bg-blue-500/0  hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50 text-zinc-950 hover:text-red-600 transition-colors"
+                      "group inline-flex h-9 w-max items-center justify-center  px-4 py-2 text-sm font-medium hover:bg-blue-500/0  hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50 text-zinc-950 hover:text-red-700 transition-colors"
                     )}
                   >
                     HOME
@@ -54,7 +54,7 @@ export default function Navbar() {
                   <Link
                     href="/"
                     className={cn(
-                      "group inline-flex h-9 w-max items-center justify-center  px-4 py-2 text-sm font-medium hover:bg-blue-500/0  hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50 text-zinc-950 hover:text-red-600 transition-colors"
+                      "group inline-flex h-9 w-max items-center justify-center  px-4 py-2 text-sm font-medium hover:bg-blue-500/0  hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50 text-zinc-950 hover:text-red-700 transition-colors"
                     )}
                   >
                     QUEM SOMOS
@@ -64,7 +64,7 @@ export default function Navbar() {
 
               {/* Dropdown - SERVIÇOS */}
               <NavigationMenuItem>
-                <NavigationMenuTrigger className="text-zinc-950 hover:text-red-600 data-[state=open]:text-red-600 bg-black/00 hover:bg-blue-500/0">
+                <NavigationMenuTrigger className="text-zinc-950 hover:text-red-700 data-[state=open]:text-red-700 bg-black/00 hover:bg-blue-500/0">
                   SERVIÇOS
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>
@@ -185,35 +185,22 @@ export default function Navbar() {
                   <Link
                     href="/"
                     className={cn(
-                      "group inline-flex h-9 w-max items-center justify-center  px-4 py-2 text-sm font-medium hover:bg-blue-500/0  hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50 text-zinc-950 hover:text-red-600 transition-colors"
+                      "group inline-flex h-9 w-max items-center justify-center  px-4 py-2 text-sm font-medium hover:bg-blue-500/0  hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50 text-zinc-950 hover:text-red-700 transition-colors"
                     )}
                   >
                     CLIENTES
                   </Link>
                 </NavigationMenuLink>
               </NavigationMenuItem>
-              <NavigationMenuItem>
-                <NavigationMenuLink asChild>
-                  <Link
-                    href="/"
-                    className={cn(
-                      "group inline-flex h-9 w-max items-center justify-center  px-4 py-2 text-sm font-medium hover:bg-blue-500/0  hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50 text-zinc-950 hover:text-red-600 transition-colors"
-                    )}
-                  >
-                    PARCEIROS
-                  </Link>
-                </NavigationMenuLink>
-              </NavigationMenuItem>
-              
             </NavigationMenuList>
           </NavigationMenu>
         </div>
 
         {/* Botão Fale Conosco à Direita */}
-        <div className="hidden md:flex items-center flex-1 justify-end">
+        <div className="hidden md:flex items-center">
           <Link
             href="#contato"
-            className="bg-red-700 text-white px-5 py-2 rounded-full hover:bg-red-900 transition-all"
+            className="bg-red-800 text-white px-5 py-2 rounded-full hover:bg-red-900 transition-all"
           >
             Fale Conosco
           </Link>

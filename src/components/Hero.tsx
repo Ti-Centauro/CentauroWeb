@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { ChevronDownIcon } from '@heroicons/react/24/outline'
 
 interface HeroProps {
   title?: string;
@@ -28,7 +29,7 @@ export default function Hero({
   ctaSecondary,
 }: HeroProps) {
   return (
-    <section className="relative min-h-screen flex items-center">
+    <section className="relative min-h-[75vh] flex items-center">
       {/* Camada de Fundo (z-0) */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -39,7 +40,7 @@ export default function Hero({
           quality={90}
           className="object-cover"
         />
-        <div className="absolute inset-0 bg-black/10" />
+        <div className="absolute inset-0 bg-black/20" />
       </div>
 
       {/* Camada de Conteúdo (z-10) */}
@@ -47,7 +48,7 @@ export default function Hero({
         {/* Bloco Branco "Colado na Parede" */}
         {/* max-w-2xl: Define a largura do bloco */}
         {/* rounded-r-[3rem]: Arredonda muito apenas a direita */}
-        <div className="bg-slate-50 max-w-2xl p-7 rounded-r-[3rem] shadow-2xl animate-fade-in-right">
+        <div className="bg-neutral-100 max-w-2xl p-7 rounded-r-[3rem] shadow-2xl animate-fade-in-right">
           
           <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-4 leading-tight">
             {title}
@@ -60,7 +61,7 @@ export default function Hero({
           <div className="flex flex-col sm:flex-row gap-4">
             <Link
               href={ctaPrimary.href}
-              className="bg-red-700 hover:bg-red-800 text-white px-8 py-3.5 rounded-full font-bold text-center transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-red-900/30"
+              className="bg-red-800 hover:bg-red-800 text-white px-8 py-3.75 rounded-full font-bold text-center transition-all duration-500 transform hover:scale-101 shadow-lg hover:shadow-red-900/30 "
             >
               {ctaPrimary.text}
             </Link>
@@ -68,9 +69,10 @@ export default function Hero({
             {ctaSecondary && (
               <Link
                 href={ctaSecondary.href}
-                className="bg-transparent hover:bg-gray-50 text-gray-700 px-8 py-3.5 rounded-full font-bold text-center border-2 border-gray-200 transition-all duration-300 hover:border-gray-300"
+                className="bg-transparent hover:bg-gray-50 text-gray-700 px-8 py-3.5 rounded-2xl font-bold text-center border-2 border-transparent transition-all duration-300 hover:bg-transparent hover:text-red-700 flex items-center justify-center gap-2"
               >
                 {ctaSecondary.text}
+                <ChevronDownIcon className="w-5 h-5" />
               </Link>
             )}
           </div>
