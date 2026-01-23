@@ -29,7 +29,7 @@ export default function Hero({
   ctaSecondary,
 }: HeroProps) {
   return (
-    <section className="relative min-h-[75vh] flex items-center">
+    <section className="relative min-h-[80vh] flex items-center">
       {/* Camada de Fundo (z-0) */}
       <div className="absolute inset-0 z-0">
         <Image
