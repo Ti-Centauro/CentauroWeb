@@ -8,7 +8,7 @@ const logos = [
   { src: "/logos/downtown.png", alt: "Logo 3" },
   { src: "/logos/mprj.png", alt: "Logo 4" },
   { src: "/logos/subsea7.png", alt: "Logo 5" },
-  { src: "/logos/logo_novo_p&g1.png", alt: "Logo 6" },
+  { src: "/logos/free-procter-icon-svg-download-png-282881.png", alt: "Logo 6" },
   { src: "/logos/prudential.png", alt: "Logo 7" },
   { src: "/logos/sbm.png", alt: "Logo 8" },
   { src: "/logos/merck.png", alt: "Logo 9" },
@@ -25,7 +25,7 @@ export default function Clientes() {
       </div>
 
       {/* O gradiente lateral dá o toque profissional de "fading" */}
-      <div className="relative">
+      <div className="relative shadow-lg">
         <div className="absolute inset-y-0 left-0 w-20 bg-gradient-to-r from-gray-50 to-transparent z-10" />
         <div className="absolute inset-y-0 right-0 w-20 bg-gradient-to-l from-gray-50 to-transparent z-10" />
 
