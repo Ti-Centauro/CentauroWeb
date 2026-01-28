@@ -3,6 +3,9 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
+import { Newsreader } from "next/font/google";
+
+const newsreader = Newsreader({ subsets: ["latin"] });
 
 // 1. Dados dos Depoimentos
 const testimonials = [
@@ -73,7 +76,7 @@ export default function Depoimentos() {
           
           {/* ESQUERDA: Título */}
           <div>
-            <h2 className="text-4xl md:text-5xl font-black text-red-800 uppercase leading-tight">
+            <h2 className={`${newsreader.className} text-4xl md:text-5xl font-black text-red-800 uppercase leading-tight`}>
               Depoimentos <br /> que incentivam <br /> a Centauro
             </h2>
           </div>

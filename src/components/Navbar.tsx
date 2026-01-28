@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -13,12 +14,21 @@ import {
 import { cn } from "@/lib/utils";
 
 export default function Navbar() {
+  const pathname = usePathname();
+
+  const handleLogoClick = (e: React.MouseEvent) => {
+    if (pathname === "/") {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  };
+
   return (
     <nav className="fixed top-0 w-full z-50 bg-white/100 ">
       <div className="max-w-7xl mx-auto px-6 h-20 flex items-center">
         {/* Logo */}
         <div className="flex items-center gap-2 flex-1">
-          <Link href="/" className="flex items-center">
+          <Link href="/" onClick={handleLogoClick} className="flex items-center">
             <Image
               src="/logo.svg"
               alt="Logo"
@@ -52,7 +62,7 @@ export default function Navbar() {
               <NavigationMenuItem>
                 <NavigationMenuLink asChild>
                   <Link
-                    href="/"
+                    href="/quem-somos"
                     className={cn(
                       "group inline-flex h-9 w-max items-center justify-center  px-4 py-2 text-sm font-medium hover:bg-blue-500/0  hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50 text-zinc-950 hover:text-red-700 transition-colors"
                     )}
