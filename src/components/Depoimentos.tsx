@@ -63,7 +63,13 @@ export default function Depoimentos() {
   return (
     <section className="bg-white py-20 px-8 md:px-20">
       <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <motion.div 
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.8 }}
+          className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
+        >
           
           {/* ESQUERDA: Título */}
           <div>
@@ -127,7 +133,7 @@ export default function Depoimentos() {
             </div>
 
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

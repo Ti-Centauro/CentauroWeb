@@ -17,7 +17,7 @@ const logos = [
 
 export default function Clientes() {
   return (
-    <section className="py-6 bg-gray-50">
+    <section className="py-15 bg-gray-50">
       <div className="container mx-auto px-4 mb-5">
         <h2 className="text-center text-sm font-semibold uppercase tracking-widest text-gray-900">
           Empresas que confiam na <span className="ext-center text-sm font-bold uppercase tracking-widest text-red-800">Centauro</span>

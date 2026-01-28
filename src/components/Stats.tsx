@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState, useRef } from "react";
+import { motion } from "framer-motion";
 
 // Seus dados (removi o duplicado que tinha na lista)
 const statsData = [
@@ -72,7 +73,15 @@ export default function Stats() {
             const { count, elementRef } = useCountUp(item.value);
 
             return (
-              <div key={index} ref={elementRef} className="flex flex-col items-center text-center group">
+              <motion.div 
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                ref={elementRef} 
+                className="flex flex-col items-center text-center group"
+              >
                 <span className="text-4xl md:text-4xl font-light text-gray-800 tabular-nums">
                   + {count.toLocaleString("pt-BR")}
                 </span>
@@ -81,7 +90,7 @@ export default function Stats() {
                 <span className="text-xs font-bold text-gray-500 uppercase tracking-widest">
                   {item.label}
                 </span>
-              </div>
+              </motion.div>
             );
           })}
 

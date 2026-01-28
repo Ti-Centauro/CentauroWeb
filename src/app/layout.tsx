@@ -1,6 +1,7 @@
 // src/app/layout.tsx
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 export default function RootLayout({
   children,
@@ -12,6 +13,7 @@ export default function RootLayout({
       <body className="bg-white-500">
         <Navbar /> {/* Ela fica aqui para aparecer em todas as páginas */}
         {children}
+        <Footer />
       </body>
     </html>
   );
