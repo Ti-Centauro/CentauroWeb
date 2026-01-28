@@ -76,7 +76,7 @@ export default function Depoimentos() {
           
           {/* ESQUERDA: Título */}
           <div>
-            <h2 className={`${newsreader.className} text-4xl md:text-5xl font-black text-red-800 uppercase leading-tight`}>
+            <h2 className="text-4xl lg:text-5xl font-black font-display text-red-800 tracking-tight leading-none mb-8 uppercase">
               Depoimentos <br /> que incentivam <br /> a Centauro
             </h2>
           </div>

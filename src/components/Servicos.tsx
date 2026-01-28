@@ -55,7 +55,7 @@ export default function Servicos() {
         
         {/* Título Fixo (opcional, para dar contexto) */}
         <div className="absolute top-10 left-8 z-20 md:top-20 md:left-20">
-            <h2 className="text-4xl md:text-5xl font-semibold text-black mb-4">
+            <h2 className="text-4xl lg:text-5xl font-black font-display text-black tracking-tight leading-none mb-8 uppercase">
               Nossos <span className="text-red-800">Serviços</span>
             </h2>
         </div>
