@@ -25,7 +25,7 @@ export default function Navbar() {
 
   return (
     <nav className="fixed top-0 w-full z-50 bg-white/100 ">
-      <div className="max-w-7xl mx-auto px-6 h-20 flex items-center">
+      <div className="w-full px-8 md:px-16 h-20 flex items-center">
         {/* Logo */}
         <div className="flex items-center gap-2 flex-1">
           <Link href="/" onClick={handleLogoClick} className="flex items-center">
@@ -154,21 +154,7 @@ export default function Navbar() {
                         </Link>
                       </NavigationMenuLink>
                     </li>
-                    <li>
-                      <NavigationMenuLink asChild>
-                        <Link
-                          href="#REDE"
-                          className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
-                        >
-                          <div className="text-sm font-medium leading-none">
-                            Cabeamento Estruturado
-                          </div>
-                          <p className="line-clamp-3 text-sm leading-snug text-muted-foreground">
-                          Rede Estruturada, Fibra Óptica e Redes Sem Fio
-                          </p>
-                        </Link>
-                      </NavigationMenuLink>
-                    </li>
+                   
                    
                     <li>
                       <NavigationMenuLink asChild>

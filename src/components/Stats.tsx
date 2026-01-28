@@ -64,7 +64,7 @@ function useCountUp(end: number, duration: number = 2000) {
 export default function Stats() {
   return (
     <section className="bg-gray-50 py-10">
-      <div className="container mx-auto px-3">
+      <div className="w-full px-8 md:px-16">
         <div className="grid grid-cols-3 md:grid-cols-3 lg:grid-cols-5 gap-6">
           
           {statsData.map((item, index) => {

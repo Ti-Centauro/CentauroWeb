@@ -48,7 +48,7 @@ export default function Hero({
         {/* Bloco Branco "Colado na Parede" */}
         {/* max-w-2xl: Define a largura do bloco */}
         {/* rounded-r-[3rem]: Arredonda muito apenas a direita */}
-        <div className="bg-neutral-100 max-w-2xl p-7 rounded-r-[3rem] shadow-2xl animate-fade-in-right">
+        <div className="bg-neutral-100 max-w-2xl py-8 pr-8 pl-8 md:pl-16 rounded-r-[3rem] shadow-2xl animate-fade-in-right">
           
           <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-4 leading-tight">
             {title}

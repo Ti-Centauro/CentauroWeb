@@ -4,8 +4,8 @@ import { Phone, Mail, MapPin } from "lucide-react";
 
 export default function Footer() {
     return (
-        <footer className="bg-neutral-900 text-white pt-20 pb-10">
-            <div className="max-w-7xl mx-auto px-8 md:px-16">
+        <footer className="bg-white text-white pt-10 pb-10 border-t-4 border-red-700 w-full px-8 md:px-16">
+            <div className="w-full">
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
                     
                     {/* Logo e Missão */}
@@ -18,9 +18,13 @@ export default function Footer() {
                                 className="object-contain logo-red"
                             />
                         </div>
-                        <p className="text-gray-400 text-sm leading-relaxed">
+                        <p className="text-black text-sm leading-relaxed mb-4">
                             Compromisso com a sua segurança. Tecnologia e excelência em cada detalhe.
                         </p>
+                        <div className="flex flex-col">
+                            <p className="text-red-800 text-sm font-bold">Powered by Centauro</p>
+                            <p className="text-red-800 text-sm font-bold">Design by Centauro</p>
+                        </div>
                     </div>
 
                     {/* Serviços */}
@@ -29,7 +33,7 @@ export default function Footer() {
                         <ul className="space-y-3">
                             {["CFTV", "SDAI", "SCA", "SAI", "Sonorização"].map((item, i) => (
                                 <li key={i}>
-                                    <Link href="/servicos" className="text-gray-400 hover:text-red-800 transition-colors text-sm">
+                                    <Link href="/servicos" className="text-black hover:text-red-800 hover:font-bold transition-colors text-sm">
                                         {item}
                                     </Link>
                                 </li>
@@ -43,7 +47,7 @@ export default function Footer() {
                         <ul className="space-y-3">
                             {["Sobre Nós", "Clientes", "Depoimentos", "Contato"].map((item, i) => (
                                 <li key={i}>
-                                    <Link href="/" className="text-gray-400 hover:text-red-800 transition-colors text-sm">
+                                    <Link href="/" className="text-black hover:text-red-800 hover:font-bold transition-colors text-sm">
                                         {item}
                                     </Link>
                                 </li>
@@ -57,21 +61,21 @@ export default function Footer() {
                         <div className="space-y-4">
                             <div className="flex items-start space-x-3">
                                 <Phone className="w-5 h-5 text-red-800 mt-0.5 flex-shrink-0" />
-                                <div>
-                                    <p className="text-gray-400 text-sm">+55 21 3176-7900</p>
+                                <div className="flex flex-col">
+                                    <p className="text-black text-sm">+55 21 3176-7900</p>
                                 </div>
                             </div>
                             <div className="flex items-start space-x-3">
                                 <Mail className="w-5 h-5 text-red-800 mt-0.5 flex-shrink-0" />
-                                <p className="text-gray-400 text-sm">contato@centaurotelecom.com.br</p>
+                                <p className="text-black text-sm">contato@centaurotelecom.com.br</p>
                             </div>
                             <div className="flex items-start space-x-3">
                                 <MapPin className="w-5 h-5 text-red-800 mt-0.5 flex-shrink-0" />
-                                <p className="text-gray-400 text-sm">Rio de Janeiro, RJ</p>
+                                <p className="text-black text-sm">Rio de Janeiro, RJ</p>
                             </div>
                             <div className="flex items-start space-x-3">
                                 <MapPin className="w-5 h-5 text-red-800 mt-0.5 flex-shrink-0" />
-                                <p className="text-gray-400 text-sm">20070-000 – Brasil</p>
+                                <p className="text-black text-sm">20070-000 – Brasil</p>
                             </div>
                         </div>
                     </div>
@@ -79,13 +83,14 @@ export default function Footer() {
                 </div>
 
                 {/* Linha Final */}
-                <div className="border-t border-gray-800 mt-16 pt-8 flex flex-col md:flex-row justify-between items-center">
-                    <p className="text-gray-500 text-sm">
+                <div className="border-t border-gray-50 mt-4 pt-6 flex flex-col md:flex-row justify-between items-center gap-4">
+                    <p className="text-black text-sm text-center md:text-left">
                         © {new Date().getFullYear()} Centauro Segurança. Todos os direitos reservados.
                     </p>
-                    <div className="flex space-x-4 mt-4 md:mt-0">
-                        <Link href="#" className="text-gray-500 hover:text-red-800 transition-colors">Política de Privacidade</Link>
-                        <Link href="#" className="text-gray-500 hover:text-red-800 transition-colors">Termos de Uso</Link>
+
+                    <div className="flex space-x-4">
+                        <Link href="#" className="text-black hover:text-red-800 hover:font-bold transition-colors">Política de Privacidade</Link>
+                        <Link href="#" className="text-black hover:text-red-800 hover:font-bold transition-colors">Termos de Uso</Link>
                     </div>
                 </div>
             </div>

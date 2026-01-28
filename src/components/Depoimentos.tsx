@@ -64,8 +64,8 @@ export default function Depoimentos() {
   }, [currentIndex]);
 
   return (
-    <section className="bg-white py-20 px-8 md:px-20">
-      <div className="max-w-7xl mx-auto">
+    <section className="bg-white py-20 px-8 md:px-16 w-full">
+      <div className="w-full">
         <motion.div 
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -82,56 +82,58 @@ export default function Depoimentos() {
           </div>
 
           {/* DIREITA: Conteúdo do Depoimento */}
-          <div className="bg-gray-100 p-10 md:p-4 rounded-[2rem] min-h-[450px] flex flex-col justify-center relative shadow-sm overflow-hidden">
+          <div className="bg-white p-10 md:p-12 rounded-[2rem] h-[500px] flex flex-col relative shadow-sm overflow-hidden font-semibold">
             
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={currentIndex}
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -20 }}
-                transition={{ duration: 0.5 }}
-                className="w-full"
-              >
-               
-                <div className="relative z-10">
-                  <p className="text-xl md:text-2xl italic text-gray-700 leading-relaxed mb-8">
-                    "{testimonials[currentIndex].quote}"
-                  </p>
-                  
-                  <div className="flex flex-col gap-4">
-                    <strong className="text-red-800 text-lg uppercase tracking-wider font-bold">
-                      — {testimonials[currentIndex].company}
-                    </strong>
+            <div className="flex-1">
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={currentIndex}
+                  initial={{ opacity: 0, x: 20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  exit={{ opacity: 0, x: -20 }}
+                  transition={{ duration: 0.5 }}
+                  className="w-full h-full flex flex-col"
+                >
+                 
+                  <div className="relative z-10 flex flex-col h-full">
+                    <p className="text-xl md:text-2xl italic text-gray-700 leading-relaxed mb-8 flex-grow">
+                      "{testimonials[currentIndex].quote}"
+                    </p>
                     
-                    <div className="h-12 w-32 relative">
-                      <Image 
-                        src={testimonials[currentIndex].logo}
-                        alt={testimonials[currentIndex].company}
-                        fill
-                        className="object-contain object-left  transition-all duration-300"
-                      />
+                    <div className="flex flex-col gap-4 mb-16">
+                      <strong className="text-red-800 text-lg uppercase tracking-wider font-bold">
+                        — {testimonials[currentIndex].company}
+                      </strong>
+                      
+                      <div className="h-12 w-32 relative">
+                        <Image 
+                          src={testimonials[currentIndex].logo}
+                          alt={testimonials[currentIndex].company}
+                          fill
+                          className="object-contain object-left"
+                        />
+                      </div>
                     </div>
                   </div>
-                </div>
-              </motion.div>
-            </AnimatePresence>
+                </motion.div>
+              </AnimatePresence>
+            </div>
 
             {/* Botoes de Navegação (Setas) */}
-            <div className="flex gap-4 mt-12">
+            <div className="absolute bottom-10 right-10 flex gap-4 z-20">
               <button 
                 onClick={prevSlide}
-                className="p-3 border border-gray-300 rounded-full hover:bg-white hover:border-red-800 transition-all text-gray-600 hover:text-red-800"
+                className="w-12 h-12 flex items-center justify-center border border-red-800/30 rounded-full text-red-800 hover:bg-red-800 hover:text-white transition-all duration-300"
                 aria-label="Anterior"
               >
-                <ChevronLeftIcon className="w-6 h-6" />
+                <ChevronLeftIcon className="w-5 h-5" />
               </button>
               <button 
                 onClick={nextSlide}
-                className="p-3 bg-red-800 text-white rounded-full hover:bg-red-900 transition-all shadow-lg px-6"
+                className="w-12 h-12 flex items-center justify-center border border-red-800/30 rounded-full text-red-800 hover:bg-red-800 hover:text-white transition-all duration-300"
                 aria-label="Próximo"
               >
-                <ChevronRightIcon className="w-6 h-6" />
+                <ChevronRightIcon className="w-5 h-5" />
               </button>
             </div>
 

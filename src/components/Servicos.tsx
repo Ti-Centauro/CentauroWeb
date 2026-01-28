@@ -54,14 +54,14 @@ export default function Servicos() {
       <div className="sticky top-0 flex h-screen items-center overflow-hidden">
         
         {/* Título Fixo (opcional, para dar contexto) */}
-        <div className="absolute top-10 left-8 z-20 md:top-20 md:left-20">
+        <div className="absolute top-10 left-8 z-20 md:top-20 md:left-16">
             <h2 className="text-4xl lg:text-5xl font-black font-display text-black tracking-tight leading-none mb-8 uppercase">
               Nossos <span className="text-red-800">Serviços</span>
             </h2>
         </div>
         {/* A Lista de Cards que se move horizontalmente */}
         {/* Usamos motion.div e passamos o estilo 'x' calculado antes */}
-        <motion.div style={{ x }} className="flex gap-8 px-8 md:px-20 pt-32">
+        <motion.div style={{ x }} className="flex gap-8 px-8 md:px-16 pt-32">
           
           {/* Mapeamos os dados para criar os cards */}
           {services.map((service, index) => {
