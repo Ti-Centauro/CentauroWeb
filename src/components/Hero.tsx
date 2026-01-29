@@ -50,11 +50,11 @@ export default function Hero({
         {/* rounded-r-[3rem]: Arredonda muito apenas a direita */}
         <div className="bg-neutral-100 max-w-2xl py-8 pr-8 pl-8 md:pl-16 rounded-r-[3rem] shadow-2xl animate-fade-in-right">
           
-          <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-4 leading-tight">
+          <h1 className="text-2xl md:text-3xl lg:text-4xl font-display font-extrabold text-gray-900 mb-4 leading-tight tracking-tighter">
             {title}
           </h1>
 
-          <p className="text-lg md:text-xl text-gray-500 mb-5 leading-relaxed max-w-md">
+          <p className="text-lg md:text-xl text-gray-700 mb-5 leading-relaxed max-w-md font-sans font-light">
             {subtitle}
           </p>
 

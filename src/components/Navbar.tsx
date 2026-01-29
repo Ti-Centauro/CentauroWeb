@@ -195,7 +195,7 @@ export default function Navbar() {
         {/* Botão Fale Conosco à Direita */}
         <div className="hidden md:flex items-center">
           <Link
-            href="#contato"
+            href="/fale-conosco"
             className="bg-red-800 text-white px-5 py-2 rounded-full hover:bg-red-900 transition-all"
           >
             Fale Conosco

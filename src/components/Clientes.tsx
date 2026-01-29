@@ -19,8 +19,8 @@ export default function Clientes() {
   return (
     <section className="py-15 bg-gray-50">
       <div className="w-full px-8 md:px-16 mb-5">
-        <h2 className="text-center text-sm font-semibold uppercase tracking-widest text-gray-900">
-          Empresas que confiam na <span className="ext-center text-sm font-bold uppercase tracking-widest text-red-800">Centauro</span>
+        <h2 className="text-center text-sm font-display font-semibold uppercase tracking-widest text-gray-900">
+          Empresas que confiam na <span className="ext-center text-sm font-display font-black uppercase tracking-widest text-red-800">Centauro</span>
         </h2>
       </div>
 
