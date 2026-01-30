@@ -25,7 +25,7 @@ const testimonials = [
     logo: "/logos/logologum.png"
   },
   {
-    quote: "Segue em anexo o elogio ao colaboradro (...) em relação à sua destacada atuação corroborativa para o bom êxito da 34ª Reunião do CNOMP. Aproveito também para elgoiar a atuação de toda a equipe.",
+    quote: "Segue em anexo o elogio ao colaborador (...) em relação à sua destacada atuação corroborativa para o bom êxito da 34ª Reunião do CNOMP. Aproveito também para elogiar a atuação de toda a equipe.",
     company: "MPRJ",
     logo: "/logos/mprj.png"
   },
@@ -82,7 +82,7 @@ export default function Depoimentos() {
           </div>
 
           {/* DIREITA: Conteúdo do Depoimento */}
-          <div className="bg-white p-10 md:p-12 rounded-[2rem] h-[500px] flex flex-col relative shadow-sm overflow-hidden font-semibold">
+          <div className="bg-white p-6 md:p-12 rounded-[2rem] min-h-[400px] md:min-h-[500px] h-auto flex flex-col relative shadow-sm overflow-hidden font-light">
             
             <div className="flex-1">
               <AnimatePresence mode="wait">
@@ -96,7 +96,7 @@ export default function Depoimentos() {
                 >
                  
                   <div className="relative z-10 flex flex-col h-full">
-                    <p className="text-xl md:text-2xl italic text-gray-700 leading-relaxed mb-8 flex-grow">
+                    <p className="text-xl md:text-2xl font-display text-gray-800 leading-relaxed mb-2 flex-grow">
                       "{testimonials[currentIndex].quote}"
                     </p>
                     

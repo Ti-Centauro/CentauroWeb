@@ -55,20 +55,22 @@ export default function Servicos() {
         
         {/* Título Fixo (opcional, para dar contexto) */}
         <div className="absolute top-10 left-8 z-20 md:top-20 md:left-16">
-            <h2 className="text-4xl lg:text-5xl font-black font-display text-black tracking-tight leading-none mb-8 uppercase">
+            <h2 className="text-3xl md:text-5xl font-black font-display text-black tracking-tight leading-none mb-8 uppercase">
               Nossos <span className="text-red-800">Serviços</span>
             </h2>
         </div>
         {/* A Lista de Cards que se move horizontalmente */}
         {/* Usamos motion.div e passamos o estilo 'x' calculado antes */}
-        <motion.div style={{ x }} className="flex gap-8 px-8 md:px-16 pt-32">
+        <motion.div style={{ x }} className="flex gap-8 px-8 md:px-16 items-center h-full">
           
           {/* Mapeamos os dados para criar os cards */}
           {services.map((service, index) => {
             return (
               <div
                 key={index}
-                className="group relative h-[450px] w-[350px] md:h-[550px] md:w-[450px] overflow-hidden rounded-3xl bg-neutral-800 flex-shrink-0"
+                // Mudança Crítica: De pixels fixos (h-[550px]) para Viewport Height (h-[60vh])
+                // Isso garante que o card sempre ocupe 60% da altura da tela de quem está vendo.
+                className="group relative h-[50vh] w-[80vw] md:h-[60vh] md:w-[30vw] min-w-[300px] max-w-[450px] overflow-hidden rounded-3xl bg-neutral-800 flex-shrink-0"
               >
                 {/* Imagem de Fundo */}
                 <div 

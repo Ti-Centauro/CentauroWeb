@@ -4,6 +4,7 @@ import Link from "next/link";
 import { motion, Variants } from "framer-motion";
 import { useState, FormEvent } from "react";
 import { Send, Instagram, Linkedin } from "lucide-react";
+import { contactSchema, ContactFormData } from "@/lib/contactSchema";
 
 // Configuração da animação
 const fadeInUp: Variants = {
@@ -13,13 +14,22 @@ const fadeInUp: Variants = {
 
 export default function FaleConosco() {
   const [loading, setLoading] = useState(false);
+  const [errors, setErrors] = useState<Partial<Record<keyof ContactFormData, string[]>>>({});
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoading(true);
+    setErrors({});
     
     const formData = new FormData(e.currentTarget);
     const data = Object.fromEntries(formData);
+
+    const validation = contactSchema.safeParse(data);
+    if (!validation.success) {
+      setErrors(validation.error.flatten().fieldErrors);
+      setLoading(false);
+      return;
+    }
 
     try {
       const response = await fetch('/api/contact', {
@@ -28,11 +38,17 @@ export default function FaleConosco() {
         body: JSON.stringify(data),
       });
       
+      const result = await response.json();
+      
       if (response.ok) {
         alert("Mensagem enviada com sucesso!");
         (e.target as HTMLFormElement).reset();
       } else {
-        alert("Erro ao enviar.");
+        if (result.errors) {
+          setErrors(result.errors);
+        } else {
+          alert("Erro ao enviar: " + (result.message || "Tente novamente."));
+        }
       }
     } catch(error) {
       console.error(error);
@@ -101,9 +117,10 @@ export default function FaleConosco() {
                  id="name" 
                  name="name"
                  required 
-                 className="w-full bg-gray-50 border border-gray-400 px-4 py-3 text-gray-900 focus:outline-none focus:border-red-700 focus:ring-1 focus:ring-red-700 transition-all duration-300 placeholder:text-gray-300" 
+                 className={`w-full bg-gray-50 border px-4 py-3 text-gray-900 focus:outline-none focus:ring-1 transition-all duration-300 placeholder:text-gray-300 ${errors.name ? 'border-red-500 focus:border-red-500 focus:ring-red-500' : 'border-gray-400 focus:border-red-700 focus:ring-red-700'}`}
                  placeholder="Seu nome completo" 
                />
+               {errors.name && <span className="text-red-500 text-xs font-medium">{errors.name[0]}</span>}
             </div>
 
             {/* Grid Email e Telefone */}
@@ -115,9 +132,10 @@ export default function FaleConosco() {
                    id="email" 
                    name="email"
                    required 
-                   className="w-full bg-gray-50 border border-gray-400 px-4 py-3 text-gray-900 focus:outline-none focus:border-red-700 focus:ring-1 focus:ring-red-700 transition-all duration-300 placeholder:text-gray-300" 
+                   className={`w-full bg-gray-50 border px-4 py-3 text-gray-900 focus:outline-none focus:ring-1 transition-all duration-300 placeholder:text-gray-300 ${errors.email ? 'border-red-500 focus:border-red-500 focus:ring-red-500' : 'border-gray-400 focus:border-red-700 focus:ring-red-700'}`}
                    placeholder="seu@email.com" 
                  />
+                 {errors.email && <span className="text-red-500 text-xs font-medium">{errors.email[0]}</span>}
                </div>
                <div className="space-y-2">
                  <label htmlFor="phone" className="text-xs font-bold uppercase tracking-widest text-gray-500">Telefone</label>
@@ -125,9 +143,10 @@ export default function FaleConosco() {
                    type="tel" 
                    id="phone" 
                    name="phone" 
-                   className="w-full bg-gray-50 border border-gray-400 px-4 py-3 text-gray-900 focus:outline-none focus:border-red-700 focus:ring-1 focus:ring-red-700 transition-all duration-300 placeholder:text-gray-300" 
+                   className={`w-full bg-gray-50 border px-4 py-3 text-gray-900 focus:outline-none focus:ring-1 transition-all duration-300 placeholder:text-gray-300 ${errors.phone ? 'border-red-500 focus:border-red-500 focus:ring-red-500' : 'border-gray-400 focus:border-red-700 focus:ring-red-700'}`}
                    placeholder="(21) 99999-9999" 
                  />
+                 {errors.phone && <span className="text-red-500 text-xs font-medium">{errors.phone[0]}</span>}
                </div>
             </div>
 
@@ -139,9 +158,10 @@ export default function FaleConosco() {
                  name="message" 
                  rows={6} 
                  required 
-                 className="w-full bg-gray-50 border border-gray-400 px-4 py-3 text-gray-900 focus:outline-none focus:border-red-700 focus:ring-1 focus:ring-red-700 transition-all duration-300 placeholder:text-gray-300 resize-none" 
+                 className={`w-full bg-gray-50 border px-4 py-3 text-gray-900 focus:outline-none focus:ring-1 transition-all duration-300 placeholder:text-gray-300 resize-none ${errors.message ? 'border-red-500 focus:border-red-500 focus:ring-red-500' : 'border-gray-400 focus:border-red-700 focus:ring-red-700'}`}
                  placeholder="Como podemos ajudar?"
                ></textarea>
+               {errors.message && <span className="text-red-500 text-xs font-medium">{errors.message[0]}</span>}
             </div>
 
             {/* Botão de Envio */}
@@ -159,10 +179,13 @@ export default function FaleConosco() {
         </div>
 
         {/* DIREITA: Mapa e Infos (5 Colunas) */}
-        <div className="lg:col-span-5 space-y-8">
+        {/* DIREITA: Mapa e Infos (5 Colunas) */}
+        {/* Adicionamos h-full e flex-col para ocupar a altura toda se o form for grande */}
+        <div className="lg:col-span-5 flex flex-col gap-8 h-full">
            
            {/* Mapa */}
-           <div className="h-[350px] w-full bg-gray-200 rounded-lg overflow-hidden border border-gray-200 shadow-sm">
+           {/* flex-grow (flex-1) faz o mapa ocupar todo o espaço vazio disponível */}
+           <div className="flex-1 w-full bg-gray-200 rounded-lg overflow-hidden border border-gray-200 shadow-sm min-h-[350px]">
              <iframe 
                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3675.310454184767!2d-43.17672854070256!3d-22.90191724717664!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x997f5f2c547117%3A0xb43b587d8217965a!2sR.%20Buenos%20Aires%2C%2015%20-%20Centro%2C%20Rio%20de%20Janeiro%20-%20RJ%2C%2020070-021!5e0!3m2!1spt-BR!2sbr!4v1769696019452!5m2!1spt-BR!2sbr" 
                width="100%" 
@@ -174,7 +197,7 @@ export default function FaleConosco() {
            </div>
 
            {/* Informações de Texto */}
-           <div className="bg-gray-50 p-8 border border-gray-100">
+           <div className="bg-gray-50 p-8 border border-gray-100 shrink-0">
               <h3 className="font-black font-display uppercase tracking-wider text-black mb-4 text-lg">Nosso Escritório</h3>
               <div className="space-y-4 text-gray-600 font-light font-sans">
                 <p>
@@ -191,14 +214,14 @@ export default function FaleConosco() {
            </div>
 
            {/* Redes Sociais */}
-           <div className="pt-2">
+           <div className="pt-2 shrink-0">
               <h3 className="font-black font-display uppercase tracking-wider text-black mb-4 text-sm">Siga-nos</h3>
               <div className="flex gap-4">
-                  <a href="#" className="flex items-center gap-2 text-gray-600 hover:text-red-700 transition-colors font-medium">
+                  <a href="https://www.instagram.com/centauroeng/" className="flex items-center gap-2 text-gray-600 hover:text-red-700 transition-colors font-medium">
                       <Instagram className="w-5 h-5" />
                       Instagram
                   </a>
-                  <a href="#" className="flex items-center gap-2 text-gray-600 hover:text-red-700 transition-colors font-medium">
+                  <a href="https://br.linkedin.com/company/centauro-engenharia" className="flex items-center gap-2 text-gray-600 hover:text-red-700 transition-colors font-medium">
                       <Linkedin className="w-5 h-5" />
                       LinkedIn
                   </a>
