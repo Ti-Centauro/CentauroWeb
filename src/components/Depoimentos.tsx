@@ -64,7 +64,7 @@ export default function Depoimentos() {
   }, [currentIndex]);
 
   return (
-    <section className="bg-white py-20 px-8 md:px-16 w-full">
+    <section id="Depoimentos" className="bg-white py-20 px-8 md:px-16 w-full">
       <div className="w-full">
         <motion.div 
           initial={{ opacity: 0, y: 50 }}
@@ -77,12 +77,12 @@ export default function Depoimentos() {
           {/* ESQUERDA: Título */}
           <div>
             <h2 className="text-4xl lg:text-5xl font-black font-display text-black tracking-tight leading-none mb-8 uppercase">
-              Depoimentos <br /> que incentivam <br /> <span className="text-black">a <span className="text-red-800">Centauro</span></span>
+              Depoimentos <br /> que incentivam <br /> <span className="text-black">a <span className="text-red-700 font-serif italic font-bold">Centauro</span></span>
             </h2>
           </div>
 
           {/* DIREITA: Conteúdo do Depoimento */}
-          <div className="bg-white p-6 md:p-12 rounded-[2rem] min-h-[400px] md:min-h-[500px] h-auto flex flex-col relative shadow-sm overflow-hidden font-light">
+          <div className="bg-white p-6 md:p-12 rounded-[2rem] h-[550px] md:h-[600px] flex flex-col relative shadow-xl overflow-hidden font-light">
             
             <div className="flex-1">
               <AnimatePresence mode="wait">
@@ -101,7 +101,7 @@ export default function Depoimentos() {
                     </p>
                     
                     <div className="flex flex-col gap-4 mb-16">
-                      <strong className="text-red-800 text-lg uppercase tracking-wider font-bold">
+                      <strong className="text-red-700 text-lg uppercase tracking-wider font-semibold">
                         — {testimonials[currentIndex].company}
                       </strong>
                       

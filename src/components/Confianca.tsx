@@ -4,7 +4,7 @@ import { motion } from "framer-motion"
 
 export default function Confianca(){
   return(
-    <section id="Confianca" className="scroll-mt-24 relative py-20 bg-slate-200 overflow-hidden">
+    <section id="Confianca" className="scroll-mt-24 relative py-20 bg-slate-100 overflow-hidden">
         <div className="absolute top-0 left-0 w-full lg:w-[40%] h-full bg-red-800 z-0"></div>
 
     <div className="w-full px-8 md:px-16 relative z-10">

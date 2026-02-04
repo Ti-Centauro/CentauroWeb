@@ -6,13 +6,13 @@ const logos = [
   { src: "/logos/globo1.png", alt: "Logo 1" },
   { src: "/logos/logobraskem.png", alt: "Logo 2" },
   { src: "/logos/downtown.png", alt: "Logo 3" },
-  { src: "/logos/mprj.png", alt: "Logo 4" },
+  { src: "/logos/icon-mprj.png", alt: "Logo 4" },
   { src: "/logos/subsea7.png", alt: "Logo 5" },
-  { src: "/logos/free-procter-icon-svg-download-png-282881.png", alt: "Logo 6" },
-  { src: "/logos/prudential.png", alt: "Logo 7" },
+  { src: "/logos/icon-procter.png", alt: "Logo 6" },
+  { src: "/logos/icon-prudential.png", alt: "Logo 7" },
   { src: "/logos/sbm.png", alt: "Logo 8" },
   { src: "/logos/merck.png", alt: "Logo 9" },
-  { src: "/logos/logo_metro.png", alt: "Logo 10" }  
+  { src: "/logos/logo_metro.png", alt: "Logo 10" }
 ];
 
 export default function Clientes() {

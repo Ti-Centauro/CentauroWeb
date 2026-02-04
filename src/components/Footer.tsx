@@ -33,7 +33,7 @@ export default function Footer() {
                         <ul className="space-y-3">
                             {["CFTV", "SDAI", "SCA", "SAI", "Sonorização"].map((item, i) => (
                                 <li key={i}>
-                                    <Link href="/servicos" className="text-black hover:text-red-800 hover:font-bold transition-colors text-sm">
+                                    <Link href="" className="text-black hover:text-red-800 hover:font-bold transition-colors text-sm">
                                         {item}
                                     </Link>
                                 </li>
@@ -45,13 +45,26 @@ export default function Footer() {
                     <div>
                         <h3 className="text-lg font-bold mb-6 text-red-800 uppercase tracking-wider">Institucional</h3>
                         <ul className="space-y-3">
-                            {["Sobre Nós", "Clientes", "Depoimentos", "Contato"].map((item, i) => (
-                                <li key={i}>
-                                    <Link href="/" className="text-black hover:text-red-800 hover:font-bold transition-colors text-sm">
-                                        {item}
-                                    </Link>
-                                </li>
-                            ))}
+                            <li>
+                                <Link href="/quem-somos" className="text-black hover:text-red-800 hover:font-bold transition-colors text-sm">
+                                    Sobre Nós
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/clientes" className="text-black hover:text-red-800 hover:font-bold transition-colors text-sm">
+                                    Clientes
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/#Depoimentos" className="text-black hover:text-red-800 hover:font-bold transition-colors text-sm">
+                                    Depoimentos
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/fale-conosco" className="text-black hover:text-red-800 hover:font-bold transition-colors text-sm">
+                                    Contato
+                                </Link>
+                            </li>
                         </ul>
                     </div>
 

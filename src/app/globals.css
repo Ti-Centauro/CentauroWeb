@@ -134,7 +134,7 @@ html {
 }
 
 body {
-  --sb-track-color: #ffffff;
+  --sb-track-color: #000000;
   --sb-thumb-color: #bb0000;
   --sb-size: 14px;
 }

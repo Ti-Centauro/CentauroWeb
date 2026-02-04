@@ -48,7 +48,7 @@ export default function Servicos() {
 
  return (
     // Container principal: Define a altura "fantasma" para rolar (300vh)
-    <section ref={targetRef} className="relative h-[250vh] bg-neutral-200/50 shadow-lg">
+    <section id="Servicos" ref={targetRef} className="relative h-[250vh] bg-neutral-200/50 shadow-lg">
       
       {/* Container visual: Fica "preso" na tela enquanto rolamos */}
       <div className="sticky top-0 flex h-screen items-center overflow-hidden">
