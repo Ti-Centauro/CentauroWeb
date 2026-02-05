@@ -24,7 +24,7 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="fixed top-0 w-full z-50 bg-white/100 ">
+    <nav className="fixed top-0 w-full z-50 bg-white/100 border-b border-gray-200 shadow-xl">
       <div className="w-full px-8 md:px-16 h-20 flex items-center">
         {/* Logo */}
         <div className="flex items-center gap-2 flex-1">
@@ -50,7 +50,8 @@ export default function Navbar() {
                   <Link
                     href="/"
                     className={cn(
-                      "group inline-flex h-9 w-max items-center justify-center  px-4 py-2 text-sm font-medium hover:bg-blue-500/0  hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50 text-zinc-950 hover:text-red-700 transition-colors"
+                      "group inline-flex h-9 w-max items-center justify-center px-4 py-2 text-sm font-medium transition-colors disabled:pointer-events-none disabled:opacity-50 text-zinc-950 relative after:absolute after:bottom-0 after:left-4 after:h-[3px] after:bg-red-700 after:transition-all after:duration-300",
+                      pathname === "/" ? "after:w-[calc(100%-32px)] text-red-700" : "after:w-0 hover:after:w-[calc(100%-32px)] hover:text-red-700"
                     )}
                   >
                     HOME
@@ -64,7 +65,8 @@ export default function Navbar() {
                   <Link
                     href="/quem-somos"
                     className={cn(
-                      "group inline-flex h-9 w-max items-center justify-center  px-4 py-2 text-sm font-medium hover:bg-blue-500/0  hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50 text-zinc-950 hover:text-red-700 transition-colors"
+                      "group inline-flex h-9 w-max items-center justify-center px-4 py-2 text-sm font-medium transition-colors disabled:pointer-events-none disabled:opacity-50 text-zinc-950 relative after:absolute after:bottom-0 after:left-4 after:h-[3px] after:bg-red-700 after:transition-all after:duration-300",
+                      pathname === "/quem-somos" ? "after:w-[calc(100%-32px)] text-red-700" : "after:w-0 hover:after:w-[calc(100%-32px)] hover:text-red-700"
                     )}
                   >
                     QUEM SOMOS
@@ -74,7 +76,10 @@ export default function Navbar() {
 
               {/* Dropdown - SERVIÇOS */}
               <NavigationMenuItem>
-                <NavigationMenuTrigger className="text-zinc-950 hover:text-red-700 data-[state=open]:text-red-700 bg-black/00 hover:bg-blue-500/0">
+                <NavigationMenuTrigger className={cn(
+                  "text-zinc-950 bg-transparent hover:bg-transparent data-[state=open]:bg-transparent focus:bg-transparent relative after:absolute after:bottom-0 after:left-4 after:h-[3px] after:bg-red-700 after:transition-all after:duration-300 after:w-0 hover:after:w-[calc(100%-32px)] hover:text-red-700 data-[state=open]:text-red-700",
+                  // Mantém sublinhado se um submenu estiver ativo (opcional, aqui deixei apenas hover)
+                )}>
                   SERVIÇOS
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>
@@ -181,7 +186,8 @@ export default function Navbar() {
                   <Link
                     href="/clientes"
                     className={cn(
-                      "group inline-flex h-9 w-max items-center justify-center  px-4 py-2 text-sm font-medium hover:bg-blue-500/0  hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50 text-zinc-950 hover:text-red-700 transition-colors"
+                      "group inline-flex h-9 w-max items-center justify-center px-4 py-2 text-sm font-medium transition-colors disabled:pointer-events-none disabled:opacity-50 text-zinc-950 relative after:absolute after:bottom-0 after:left-4 after:h-[3px] after:bg-red-700 after:transition-all after:duration-300",
+                      pathname === "/clientes" ? "after:w-[calc(100%-32px)] text-red-700" : "after:w-0 hover:after:w-[calc(100%-32px)] hover:text-red-700"
                     )}
                   >
                     CLIENTES
