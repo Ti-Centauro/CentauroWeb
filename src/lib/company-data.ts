@@ -66,7 +66,7 @@ INFORMAÇÕES DE CONTATO E LOCALIZAÇÃO:
 - CEP: 20070-000.
 - Telefone Principal: (21) 3176-7900.
 - E-mail Comercial: contato@centaurotelecom.com.br
-- Horário de Funcionamento: Segunda a Sexta, horário comercial (08h às 18h).
+- Horário de Funcionamento: Segunda a Sexta, horário comercial (09h às 18h).
 - Área de Atuação: Base no Rio de Janeiro, com capacidade logística para atender projetos em todo o Brasil.
 
 TOM DE VOZ DA MARCA:

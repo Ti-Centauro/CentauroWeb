@@ -8,29 +8,8 @@ const fadeInUp: Variants = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } }
 };
 
-const CATEGORIAS = [
-  "Todos", 
-  "Bancos / Seguradora", 
-  "Comércio / Shopping", 
-  "Construtora", 
-  "Farmacêutica", 
-  "Governo", 
-  "Mídia e Entretenimento", 
-  "Óleo e Gás", 
-  "Petroquímica",
-  "Outros"
-];
-const CLIENTES_DADOS = [
-  { id: 1, nome: "Prudential",   categoria: "Bancos / Seguradora", imagem: "/logos/icon-prudential.png" },
-  { id: 2, nome: "Procter & Gamble",    categoria: "Outros", imagem: "/logos/icon-procter.png" },
-  { id: 3, nome: "MPRJ",  categoria: "Governo", imagem: "/logos/icon-mprj.png" },
-  { id: 4, nome: "SBM Offshore",     categoria: "Óleo e Gás", imagem: "/logos/sbm.png" },
-  { id: 5, nome: "Merck",   categoria: "Farmacêutica", imagem: "/logos/merck.png" },
-  { id: 6, nome: "Subsea 7",   categoria: "Óleo e Gás", imagem: "/logos/subsea7.png" },
-  { id: 7, nome: "Petrobras",   categoria: "Óleo e Gás", imagem: "/logos/petrobras.png" },
-  { id: 8, nome: "Globo",   categoria: "Mídia e Entretenimento", imagem: "/logos/globo1.png" },
-  { id: 9, nome: "Downtown",   categoria: "Comércio / Shopping", imagem: "/logos/downtown.png" },
-];
+import { CLIENTES_DADOS, CATEGORIAS } from "@/data/clientes";
+
 export default function Clientes() {
   const [filtroAtivo, setFiltroAtivo] = useState("Todos");
   const clientesFiltrados = CLIENTES_DADOS.filter(cliente => 
@@ -77,6 +56,13 @@ export default function Clientes() {
         </div>
       </motion.section>
       {/* SEÇÃO 2: BARRA VERMELHA DE FILTROS */}
+      <motion.section
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        variants={fadeInUp}
+      >
+
       <section className="w-full bg-red-800">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
             
@@ -100,6 +86,7 @@ export default function Clientes() {
             </div>
         </div>
       </section>
+      </motion.section>
       {/* SEÇÃO 3: GRID DE CLIENTES */}
       <section className="w-full max-w-[1400px] mx-auto px-6 lg:px-12 pt-12">
           
@@ -124,7 +111,7 @@ export default function Clientes() {
                       src={cliente.imagem} 
                       alt={cliente.nome}
                       fill
-                      className="object-contain p-4 transition-transform duration-300 group-hover:scale-110"
+                      className="object-contain p-3 transition-transform duration-300 group-hover:scale-110"
                     />
                 </div>
                 
