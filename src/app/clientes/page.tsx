@@ -25,10 +25,10 @@ export default function Clientes() {
         viewport={{ once: true }}
         variants={fadeInUp}
         // Classes exatas que você pediu para igualar a altura
-        className="w-full max-w-[1200px] mx-auto px-6 lg:px-8 pt-24 pb-32 space-y-32 bg-white"
+        className="w-full max-w-[1200px] mx-auto px-6 lg:px-8 pt-24 pb-22 space-y-32 bg-white"
       >
         {/* Div interno para simular o padding extra que existe na página Quem Somos */}
-        <div className="relative pt-12 lg:pt-20 border-b border-gray-100 pb-20">
+        <div className="relative pt-12 lg:pt-20 border-b border-gray-100">
             <div className="flex flex-col lg:flex-row items-end justify-between gap-12">
             <div className="w-full">
                 {/* Breadcrumb */}
@@ -88,17 +88,23 @@ export default function Clientes() {
       </section>
       </motion.section>
       {/* SEÇÃO 3: GRID DE CLIENTES */}
-      <section className="w-full max-w-[1400px] mx-auto px-6 lg:px-12 pt-12">
+      {/* SEÇÃO 3: GRID DE CLIENTES */}
+      <motion.section 
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        variants={fadeInUp}
+        className="w-full max-w-[1400px] mx-auto px-6 lg:px-12"
+      >
           
         {/* Grid com bordas estilo tabela */}
-        <motion.div 
-            layout 
+        {/* Grid com bordas estilo tabela */}
+        <div 
             className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 border-t border-l border-gray-100"
         >
         <AnimatePresence mode='popLayout'>
             {clientesFiltrados.map((cliente) => (
             <motion.div
-                layout
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
@@ -121,13 +127,13 @@ export default function Clientes() {
             </motion.div>
             ))}
         </AnimatePresence>
-        </motion.div>
+        </div>
         {clientesFiltrados.length === 0 && (
             <div className="py-20 text-center text-gray-400">
                 <p>Nenhum cliente encontrado.</p>
             </div>
         )}
-      </section>
+      </motion.section>
     </main> 
   );
 }

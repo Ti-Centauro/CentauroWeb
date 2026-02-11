@@ -8,27 +8,27 @@ const services = [
   {
     title: "CFTV",
     description: "Sistema de Circuito Fechado de Televisão",
-    image: "/servicos/cftv.png",
+    image: "/servicos/cftv.webp",
   },
   {
     title: "SDAI",
     description: "Sistema de Detecção e Alerta de Incêndio",
-    image: "/servicos/sdai.png",
+    image: "/servicos/sdai.webp",
   },
   {
     title: "SCA",
     description: "Sistema de Controle de Acesso",
-    image: "/servicos/sca.png",
+    image: "/servicos/sca.webp",
   },
   {
     title: "SAI",
     description: "Sistema de Alerta de Intrusão",
-    image: "/servicos/sai.png",
+    image: "/servicos/sai.webp",
   },
   {
     title: "SON",
     description: "Sistema de Sonorização",
-    image: "/servicos/son.png",
+    image: "/servicos/son.webp",
   },
 ];
 

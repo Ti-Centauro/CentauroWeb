@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { motion, Variants } from "framer-motion";
 import { useState, FormEvent } from "react";
-import { Send, Instagram, Linkedin } from "lucide-react";
+import { Send, Instagram, Linkedin, LayoutDashboard } from "lucide-react";
 import { contactSchema, ContactFormData } from "@/lib/contactSchema";
 
 // Configuração da animação
@@ -211,20 +211,31 @@ export default function FaleConosco() {
                   +55 21 3176-7900
                 </p>
               </div>
-           </div>
 
-           {/* Redes Sociais */}
-           <div className="pt-2 shrink-0">
-              <h3 className="font-black font-display uppercase tracking-wider text-black mb-4 text-sm">Siga-nos</h3>
-              <div className="flex gap-4">
-                  <a href="https://www.instagram.com/centauroeng/" className="flex items-center gap-2 text-gray-600 hover:text-red-700 transition-colors font-medium">
-                      <Instagram className="w-5 h-5" />
-                      Instagram
-                  </a>
-                  <a href="https://br.linkedin.com/company/centauro-engenharia" className="flex items-center gap-2 text-gray-600 hover:text-red-700 transition-colors font-medium">
-                      <Linkedin className="w-5 h-5" />
-                      LinkedIn
-                  </a>
+              {/* Redes Sociais */}
+              <div className="pt-6 border-t border-gray-200 mt-6">
+                  <h3 className="font-black font-display uppercase tracking-wider text-black mb-4 text-sm">Siga-nos</h3>
+                  <div className="flex gap-4">
+                      <a href="https://www.instagram.com/centauroeng/" className="flex items-center gap-2 text-gray-600 hover:text-red-700 transition-colors font-medium">
+                          <Instagram className="w-5 h-5" />
+                          Instagram
+                      </a>
+                      <a href="https://br.linkedin.com/company/centauro-engenharia" className="flex items-center gap-2 text-gray-600 hover:text-red-700 transition-colors font-medium">
+                          <Linkedin className="w-5 h-5" />
+                          LinkedIn
+                      </a>
+                  </div>
+              </div>
+
+              {/* Portal da Centauro */}
+              <div className="pt-6 border-t border-gray-200 mt-6">
+                  <h3 className="font-black font-display uppercase tracking-wider text-black mb-4 text-sm">Portal da Centauro</h3>
+                  <div className="flex gap-4">
+                      <a href="http://www2.centaurotelecom.com.br:8080/centauro_desk/" className="flex items-center gap-2 text-gray-600 hover:text-red-700 transition-colors font-medium">
+                          <LayoutDashboard className="w-5 h-5" />
+                          Acessar Portal
+                      </a>
+                  </div>
               </div>
            </div>
 

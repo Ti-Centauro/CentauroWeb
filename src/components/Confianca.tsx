@@ -19,11 +19,11 @@ export default function Confianca(){
             className="relative h-[350px] lg:h-[420px] w-full rounded-3xl overflow-hidden shadow-2xl"
           >
              <Image
-              src="/img_confianca.png"
-              alt="Profissional Centauro trabalhando"
+              src="/img_confianca.webp"
+              alt="Professional engineer inspecting equipment"
               fill
-              className="object-cover"
-             />
+              className="object-cover pl-20"
+            />
           </motion.div>
 
          <motion.div 

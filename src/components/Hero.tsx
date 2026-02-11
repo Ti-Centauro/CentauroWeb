@@ -33,12 +33,12 @@ export default function Hero({
       {/* Camada de Fundo (z-0) */}
       <div className="absolute inset-0 z-0">
         <Image
-          src={image}
-          alt="Imagem de fundo da seção Hero"
+          src="/hero.webp"
+          alt="Technical operation center"
           fill
           priority
           quality={90}
-          className="object-cover"
+          className="object-cover object-center"
         />
         <div className="absolute inset-0 bg-black/20" />
       </div>

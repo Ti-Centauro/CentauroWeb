@@ -160,7 +160,7 @@ export default function QuemSomos() {
               "Prover soluções corporativas de alta qualidade, compassivas e tecnológicas que melhorem o bem-estar, independência e qualidade de vida."
             </p>
             <p className="text-gray-600 leading-relaxed text-base text-justify font-sans font-normal">
-              Buscamos incessantemente a excelência através de um cuidado personalizado, mantendo o mais alto nível de profissionalismo e respeito em cada interação. Nossa missão é ser o parceiro invisível que torna o sucesso visível, atuando nos bastidores com a precisão de um relógio e a empatia de um parceiro de longa data.
+              Buscamos incessantemente a excelência através de um cuidado personalizado, mantendo o mais alto nível de profissionalismo e respeito em cada interação. Nossa missão é ser o parceiro invisível que torna o sucesso visível, atuando sempre com a precisão técnica e a empatia de um aliado de longa data.
             </p>
           </div>
 
@@ -169,10 +169,10 @@ export default function QuemSomos() {
             <h3 className="text-4xl font-black font-display text-black uppercase tracking-tight">Nossa Visão</h3>
             <div className="w-12 h-1 bg-red-700"></div>
             <p className="text-gray-800 leading-relaxed text-lg font-serif font-bold italic">
-              "Ser o líder incontestável em tecnologia corporativa na região, reconhecido não apenas pela inovação de nossas soluções, mas pela humanidade de nosso atendimento."
+              "Ser o líder incontestável em tecnologia corporativa na região, reconhecido não apenas pela inovação de nossas soluções, mas pelo atendimento humano."
             </p>
             <p className="text-gray-600 leading-relaxed text-base text-justify font-sans font-normal">
-              Visualizamos um futuro onde a tecnologia remove todas as barreiras para o potencial humano, provendo suporte focado no cliente para uma vida digna, confortável e independente. Queremos ser a referência de como a ética e a tecnologia podem caminhar juntas para construir um mercado mais justo e eficiente.
+              Visualizamos um futuro onde a tecnologia remove barreiras para o potencial humano, provendo suporte focado no cliente para uma vida digna e independente. Queremos ser a referência de como a ética e a tecnologia caminham juntas para construir um mercado mais justo, eficiente e focado nas pessoas.
             </p>
           </div>
 
