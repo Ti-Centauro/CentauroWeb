@@ -40,7 +40,7 @@ export default function RootLayout({
         <Navbar /> {/* Ela fica aqui para aparecer em todas as páginas */}
         {children}
         <Footer />
-        <ChatWidget />
+        {/* <ChatWidget /> */}
       </body>
     </html>
   );
