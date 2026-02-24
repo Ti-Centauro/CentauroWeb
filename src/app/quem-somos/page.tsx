@@ -145,12 +145,12 @@ export default function QuemSomos() {
         whileInView="visible"
         viewport={{ once: true, margin: "-100px" }}
         variants={fadeInUp}
-        className="py-16 bg-white border-y border-gray-100 px-0"
+        className="py-16 bg-white  px-0"
       >
         <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 lg:gap-24 relative">
           
           {/* Vertical Divider (Desktop) */}
-          <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-px bg-gray-200 transform -translate-x-1/2"></div>
+          <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-px bg-white transform -translate-x-1/2"></div>
           
           {/* Mission */}
           <div className="flex flex-col gap-6 p-4">

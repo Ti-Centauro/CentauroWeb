@@ -105,8 +105,8 @@ export default function Footer() {
                     </p>
 
                     <div className="flex space-x-4">
-                        <Link href="#" className="text-black hover:text-red-800 hover:font-bold transition-colors">Política de Privacidade</Link>
-                        <Link href="#" className="text-black hover:text-red-800 hover:font-bold transition-colors">Termos de Uso</Link>
+                        <Link href="/politica-de-privacidade" className="text-black hover:text-red-800 hover:font-bold transition-colors">Política de Privacidade</Link>
+                        <Link href="/termos-de-uso" className="text-black hover:text-red-800 hover:font-bold transition-colors">Termos de Uso</Link>
                     </div>
                 </div>
             </div>

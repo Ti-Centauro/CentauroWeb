@@ -28,7 +28,7 @@ export default function Clientes() {
         className="w-full max-w-[1200px] mx-auto px-6 lg:px-8 pt-24 pb-22 space-y-32 bg-white"
       >
         {/* Div interno para simular o padding extra que existe na página Quem Somos */}
-        <div className="relative pt-12 lg:pt-20 border-b border-gray-100">
+        <div className="relative pt-12 lg:pt-20 border-b border-white">
             <div className="flex flex-col lg:flex-row items-end justify-between gap-12">
             <div className="w-full">
                 {/* Breadcrumb */}
@@ -88,7 +88,6 @@ export default function Clientes() {
       </section>
       </motion.section>
       {/* SEÇÃO 3: GRID DE CLIENTES */}
-      {/* SEÇÃO 3: GRID DE CLIENTES */}
       <motion.section 
         initial="hidden"
         whileInView="visible"
@@ -98,9 +97,8 @@ export default function Clientes() {
       >
           
         {/* Grid com bordas estilo tabela */}
-        {/* Grid com bordas estilo tabela */}
         <div 
-            className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 border-t border-l border-gray-100"
+            className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 border-t border-l border-white"
         >
         <AnimatePresence mode='popLayout'>
             {clientesFiltrados.map((cliente) => (
@@ -110,7 +108,7 @@ export default function Clientes() {
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.3 }}
                 key={cliente.id}
-                className="group relative aspect-square bg-white border-r border-b border-gray-50 flex items-center justify-center p-8 hover:bg-gray-50 transition-colors"
+                className="group relative aspect-square bg-white border-r border-b border-white flex items-center justify-center p-8 hover:bg-gray-50/40 transition-colors"
             >
                 <div className="relative w-32 h-32 flex items-center justify-center">
                     <Image 
