@@ -22,7 +22,7 @@ export default function Confianca(){
               src="/img_confianca.webp"
               alt="Professional engineer inspecting equipment"
               fill
-              className="object-cover pl-20"
+              className="object-cover"
             />
           </motion.div>
 

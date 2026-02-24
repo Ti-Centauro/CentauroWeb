@@ -1,34 +1,44 @@
 'use client'
 import { useRef } from "react";
 import {motion, useTransform, useScroll, useSpring} from "framer-motion";
-
-
+import Link from "next/link";
 
 const services = [
   {
     title: "CFTV",
     description: "Sistema de Circuito Fechado de Televisão",
     image: "/servicos/cftv.webp",
+    href: "/servicos/cftv"
   },
   {
     title: "SDAI",
     description: "Sistema de Detecção e Alerta de Incêndio",
     image: "/servicos/sdai.webp",
+    href: "/servicos/sdai"
   },
   {
     title: "SCA",
     description: "Sistema de Controle de Acesso",
     image: "/servicos/sca.webp",
+    href: "/servicos/sca"
   },
   {
     title: "SAI",
     description: "Sistema de Alerta de Intrusão",
     image: "/servicos/sai.webp",
+    href: "/servicos/sai"
   },
   {
     title: "SON",
     description: "Sistema de Sonorização",
     image: "/servicos/son.webp",
+    href: "/servicos/son"
+  },
+  {
+    title: "REDES",
+    description: "Cabeamento Estruturado",
+    image: "/servicos/cabeamento.webp",
+    href: "/servicos/cabeamento-estruturado"
   },
 ];
 
@@ -66,11 +76,12 @@ export default function Servicos() {
           {/* Mapeamos os dados para criar os cards */}
           {services.map((service, index) => {
             return (
-              <div
+              <Link
                 key={index}
+                href={service.href}
                 // Mudança Crítica: De pixels fixos (h-[550px]) para Viewport Height (h-[60vh])
                 // Isso garante que o card sempre ocupe 60% da altura da tela de quem está vendo.
-                className="group relative h-[50vh] w-[80vw] md:h-[60vh] md:w-[30vw] min-w-[300px] max-w-[450px] overflow-hidden rounded-3xl bg-neutral-800 flex-shrink-0"
+                className="group relative h-[50vh] w-[80vw] md:h-[60vh] md:w-[30vw] min-w-[300px] max-w-[450px] overflow-hidden rounded-3xl bg-neutral-800 flex-shrink-0 cursor-pointer"
               >
                 {/* Imagem de Fundo */}
                 <div 
@@ -83,7 +94,7 @@ export default function Servicos() {
                   <h3 className="text-3xl font-bold text-white mb-2">{service.title}</h3>
                   <p className="text-gray-300">{service.description}</p>
                 </div>
-              </div>
+              </Link>
             );
           })}
         </motion.div>

@@ -12,32 +12,32 @@ const testimonials = [
   {
     quote: "Nosso muito obrigado e Parabéns, pelo trabalho realizado por Toda a Equipe da Centauro, que neste caminhar teve tanto compromentimento e foi incasável na busca de soluções, juntamente com nossas Equipes.",
     company: "GLOBO",
-    logo: "/logos/globo1.png"
+    logo: "/logos/globo1.webp"
   },
   {
     quote: "Agradecemos o atendimento que proporcionou resolução rápida na demanda de trabalho da Petrobras junto ao Ministério das Minas e Energia. Sabemos que, o atendimento foi realizado em caráter excepcional, por isso agradecemos o pronto atendimento, que evitou constragimentos para a Companhia",
     company: "PETROBRAS",
-    logo: "/logos/petrobras.png"
+    logo: "/logos/petrobras.webp"
   },
   {
     quote: "São profissionais como vocês que fazem nosso trabalho ser mais fácil, obrigado.",
     company: "LOGUM",
-    logo: "/logos/logologum.png"
+    logo: "/logos/logologum.webp"
   },
   {
     quote: "Segue em anexo o elogio ao colaborador (...) em relação à sua destacada atuação corroborativa para o bom êxito da 34ª Reunião do CNOMP. Aproveito também para elogiar a atuação de toda a equipe.",
     company: "MPRJ",
-    logo: "/logos/mprj.png"
+    logo: "/logos/mprj.webp"
   },
    {
     quote: "Excelente a execução e qualidade do serviço. Toda documentação estava ok",
     company: "NESTLE",
-    logo: "/logos/nestle.png"
+    logo: "/logos/nestle.webp"
   },
   {
     quote: "Nós da Facilities, queremos agradecer o bom serviço que os colaboradores (...) vêm realizando no prédio. Atuando com prontidão e agilidade nos atendimentos prestados",
     company: "SUBSEA7",
-    logo: "/logos/subsea7.png"
+    logo: "/logos/subsea7.webp"
   },
   
 ];

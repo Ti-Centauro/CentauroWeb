@@ -130,7 +130,7 @@ html {
 }
 
 .logo-red {
-  filter: brightness(0.9) saturate(80%) invert(15%) sepia(94%) saturate(7151%) hue-rotate(346deg) brightness(60%) contrast(90%);
+  filter: brightness(0.9) saturate(80%) invert(15%) sepia(94%) saturate(7151%) hue-rotate(346deg) brightness(50%) contrast(95%);
 }
 
 body {

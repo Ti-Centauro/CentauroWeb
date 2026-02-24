@@ -88,7 +88,7 @@ export default function Navbar() {
                       <NavigationMenuLink asChild>
                         <Link
                           href="/servicos/cftv"
-                          className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                          className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:text-red-700"
                         >
                           <div className="text-sm font-medium leading-none">
                             CFTV
@@ -102,8 +102,8 @@ export default function Navbar() {
                     <li>
                       <NavigationMenuLink asChild>
                         <Link
-                          href="#SCA"
-                          className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                          href="/servicos/sca"
+                          className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:text-red-700"
                         >
                           <div className="text-sm font-medium leading-none">
                             SCA
@@ -118,7 +118,7 @@ export default function Navbar() {
                       <NavigationMenuLink asChild>
                         <Link
                           href="/servicos/sdai"
-                          className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                          className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:text-red-700"
                         >
                           <div className="text-sm font-medium leading-none">
                             SDAI
@@ -132,8 +132,8 @@ export default function Navbar() {
                     <li>
                       <NavigationMenuLink asChild>
                         <Link
-                          href="#SAI"
-                          className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                          href="/servicos/sai"
+                          className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:text-red-700"
                         >
                           <div className="text-sm font-medium leading-none">
                             SAI
@@ -147,8 +147,8 @@ export default function Navbar() {
                     <li>
                       <NavigationMenuLink asChild>
                         <Link
-                          href="#SON"
-                          className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                          href="/servicos/son"
+                          className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:text-red-700"
                         >
                           <div className="text-sm font-medium leading-none">
                             SON
@@ -164,14 +164,14 @@ export default function Navbar() {
                     <li>
                       <NavigationMenuLink asChild>
                         <Link
-                          href="#MANUNTENCAO"
-                          className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                          href="/servicos/cabeamento-estruturado"
+                          className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:text-red-700"
                         >
                           <div className="text-sm font-medium leading-none">
-                            Manuntenção
+                            REDES
                           </div>
                           <p className="line-clamp-3 text-sm leading-snug text-muted-foreground">
-                          Preventiva e Corretiva
+                          Cabeamento Estruturado e Dados
                           </p>
                         </Link>
                       </NavigationMenuLink>

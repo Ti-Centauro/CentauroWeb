@@ -53,7 +53,7 @@ export default function CFTVLandingPage() {
               </div>
             </h1>
             <p className="text-gray-600 max-w-md text-lg leading-relaxed border-l-4 border-red-700 pl-6 font-sans">
-              Monitoramento inteligente e tecnologia de ponta para proteger o que é mais valioso para sua organização.
+              Monitoramento efetivo de acesso e movimentação de pessoas e produtos, inibindo fraudes e protegendo clientes e funcionários.
             </p>
           </div>
           {/* Simple Image Container - No fancy CSS masks */}
@@ -86,15 +86,15 @@ export default function CFTVLandingPage() {
             O Cenário Atual
           </h2>
           <h3 className="text-4xl md:text-5xl font-black font-display leading-tight mb-8 uppercase">
-            VULNERABILIDADE <br/> <span className="text-gray-500">INVISÍVEL</span>
+            RISCOS <br/> OPERACIONAIS
           </h3>
           
           <div className="space-y-6 text-gray-400 text-lg leading-relaxed font-sans font-light">
             <p>
-              Em um mundo cada vez mais volátil, sistemas de vigilância obsoletos representam mais do que uma falha técnica; são portas abertas para riscos operacionais e perdas financeiras.
+              Sem um sistema de monitoramento adequado, atividades como fraudes, roubos e falsos acidentes podem ocorrer sem controle, gerando prejuízos.
             </p>
             <p>
-              Pontos cegos, imagens granuladas e falta de integração criam uma falsa sensação de segurança que colapsa no momento crítico.
+              A falta de documentação de atividades suspeitas impede a tomada de decisões assertivas e compromete a segurança de instalações críticas.
             </p>
           </div>
         </div>
@@ -104,18 +104,18 @@ export default function CFTVLandingPage() {
             A Resposta Centauro
           </h2>
           <h3 className="text-4xl md:text-5xl font-serif italic text-red-700 mb-8 font-bold">
-            Monitoramento Integrado
+            Controle Total
           </h3>
           
           <p className="text-gray-600 mb-10 text-lg font-sans font-light">
-            Transformamos segurança passiva em inteligência ativa. Nossa abordagem une hardware de elite com software analítico para prever incidentes antes que ocorram.
+            Câmeras de alta performance e acesso remoto em tempo real, protegido por senha, permitindo o acompanhamento e gravação simultânea das imagens no computador.
           </p>
           <ul className="space-y-6">
             {[
-              "Análise comportamental em tempo real",
-              "Integração total com controle de acesso",
-              "Redundância de dados e backup em nuvem",
-              "Suporte técnico especializado 24/7"
+              "Câmeras IP avançadas em redes de TI",
+              "Detecção de movimento programável",
+              "Impressão de imagens e backups digitais",
+              "Alertas automáticos para centrais críticas"
             ].map((item, i) => (
               <li key={i} className="flex items-start gap-3 group">
                 <CheckCircle2 className="w-6 h-6 text-red-700 shrink-0 mt-1" />
@@ -145,27 +145,27 @@ export default function CFTVLandingPage() {
               <div className="w-12 h-12 bg-red-50 flex items-center justify-center mb-6 group-hover:bg-red-700 transition-colors">
                 <ScanEye className="w-6 h-6 text-red-700 group-hover:text-white transition-colors" />
               </div>
-              <h4 className="text-xl font-bold font-display mb-4 uppercase text-black">Vigilância 24/7</h4>
+              <h4 className="text-xl font-bold font-display mb-4 uppercase text-black">Monitoramento Remoto</h4>
               <p className="text-gray-500 text-sm leading-relaxed font-sans">
-                Operação ininterrupta com visão noturna infravermelha de longo alcance e comutação automática, garantindo zero downtime.
+                Acompanhamento efetivo de acesso e movimentação de pessoas e produtos em locais estratégicos.
               </p>
             </div>
             <div className="bg-white p-10 border border-gray-200 hover:border-red-700 transition-colors duration-300 group">
               <div className="w-12 h-12 bg-red-50 flex items-center justify-center mb-6 group-hover:bg-red-700 transition-colors">
                 <Cpu className="w-6 h-6 text-red-700 group-hover:text-white transition-colors" />
               </div>
-              <h4 className="text-xl font-bold font-display mb-4 uppercase text-black">Inteligência Artificial</h4>
+              <h4 className="text-xl font-bold font-display mb-4 uppercase text-black">Tecnologia IP</h4>
               <p className="text-gray-500 text-sm leading-relaxed font-sans">
-                Algoritmos de Deep Learning para reconhecimento facial, leitura de placas e detecção de perímetro virtual.
+                Trabalhamos com Câmeras IP avançadas que ajudam a documentar atividades suspeitas em diversos locais.
               </p>
             </div>
             <div className="bg-white p-10 border border-gray-200 hover:border-red-700 transition-colors duration-300 group">
               <div className="w-12 h-12 bg-red-50 flex items-center justify-center mb-6 group-hover:bg-red-700 transition-colors">
                 <MonitorCheck className="w-6 h-6 text-red-700 group-hover:text-white transition-colors" />
               </div>
-              <h4 className="text-xl font-bold font-display mb-4 uppercase text-black">Alta Resolução</h4>
+              <h4 className="text-xl font-bold font-display mb-4 uppercase text-black">Instalações Críticas</h4>
               <p className="text-gray-500 text-sm leading-relaxed font-sans">
-                Captura de detalhes forenses em 4K UHD, permitindo zoom digital sem perda de qualidade crítica para identificação.
+                Proteção para centrais de telecomunicações e produção de energia com acionamento de alertas automáticos.
               </p>
             </div>
           </div>
@@ -199,8 +199,8 @@ export default function CFTVLandingPage() {
               </div>
               <div className="border-t-2 border-gray-200 pt-6 group hover:border-red-700 transition-colors duration-300 relative">
                  <span className="text-8xl font-black text-gray-100 absolute -top-8 right-0 -z-10 font-display select-none">03</span>
-                 <h3 className="text-xl font-bold font-display mb-4 uppercase text-black">Monitoramento</h3>
-                 <p className="text-gray-500 text-sm font-sans">Suporte contínuo e gestão remota, com relatórios periódicos e manutenção preventiva.</p>
+                 <h3 className="text-xl font-bold font-display mb-4 uppercase text-black">Manutenção</h3>
+                 <p className="text-gray-500 text-sm font-sans">Cobertura plena com manutenção preventiva e corretiva. Visitas periódicas e reparação de incidências.</p>
               </div>
            </div>
         </div>
@@ -230,9 +230,9 @@ export default function CFTVLandingPage() {
           </p>
           
           <div className="flex flex-col items-center gap-8">
-             <button className="bg-red-800 text-white px-12 py-4 font-bold font-display uppercase tracking-widest hover:bg-red-700 transition-all shadow-[0_0_40px_rgba(153,27,27,0.3)] hover:shadow-[0_0_60px_rgba(153,27,27,0.5)]">
-               Entre em contato conosco
-             </button>
+             <Link href="/fale-conosco" className="bg-red-800 text-white px-12 py-4 font-bold font-display uppercase tracking-widest hover:bg-red-700 transition-all shadow-[0_0_40px_rgba(153,27,27,0.3)] hover:shadow-[0_0_60px_rgba(153,27,27,0.5)]">
+               ENTRE EM CONTATO CONOSCO
+             </Link>
           </div>
         </div>
       </motion.section>

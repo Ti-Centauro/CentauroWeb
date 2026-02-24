@@ -49,7 +49,7 @@ NÚMEROS QUE COMPROVAM NOSSA AUTORIDADE (DADOS REAIS):
 - +20 Anos de experiência no mercado (desde 2005).
 - +10.000 Pontos de rede de dados instalados e certificados.
 - +150 km de cabos ópticos lançados em projetos.
-- +2.500 Câmeras de segurança (CFTV) instaladas.
+- +15.000 Câmeras de segurança (CFTV) instaladas.
 - +18.000 Portas instaladas em um único projeto de Call Center (Case de Sucesso).
 - Gestão de manutenção de mais de 15.000 terminais IP.
 

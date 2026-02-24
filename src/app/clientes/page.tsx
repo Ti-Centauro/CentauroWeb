@@ -110,7 +110,7 @@ export default function Clientes() {
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.3 }}
                 key={cliente.id}
-                className="group relative aspect-square bg-white border-r border-b border-gray-100 flex items-center justify-center p-8 hover:bg-gray-50 transition-colors"
+                className="group relative aspect-square bg-white border-r border-b border-gray-50 flex items-center justify-center p-8 hover:bg-gray-50 transition-colors"
             >
                 <div className="relative w-32 h-32 flex items-center justify-center">
                     <Image 

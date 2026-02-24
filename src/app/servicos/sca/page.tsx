@@ -1,9 +1,9 @@
 'use client';
 import React from "react";
 import { 
-  Flame, 
-  ShieldCheck, 
-  BellRing, 
+  Fingerprint, 
+  Lock, 
+  UserCheck, 
   CheckCircle2
 } from "lucide-react";
 import Link from "next/link"; 
@@ -25,7 +25,7 @@ const staggerContainer: Variants = {
   }
 };
 
-export default function SDAILandingPage() {
+export default function SCALandingPage() {
   return (
     <main className="min-h-screen bg-white">
       
@@ -42,24 +42,24 @@ export default function SDAILandingPage() {
         <div className="container mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-8">
             <p className="text-xs font-bold tracking-[0.2em] text-red-700 uppercase font-sans">
-              Proteção Contra Incêndio
+              Segurança Patrimonial
             </p>
             <h1 className="text-6xl md:text-8xl font-black font-display text-black leading-[0.9] tracking-tighter uppercase">
-              SISTEMAS DE <br />
+              CONTROLE DE <br />
               <div className="flex flex-col">
-                <span className="text-black">ALARME E</span>
-                <span className="text-red-800 tracking-[0.01em]">DETECÇÃO</span>
+                <span className="text-black">ACESSO E</span>
+                <span className="text-red-800 tracking-[0.01em]">FLUXO</span>
               </div>
             </h1>
             <p className="text-gray-600 max-w-md text-lg leading-relaxed border-l-4 border-red-700 pl-6 font-sans">
-              Trabalhamos com os sistemas líderes de indústria que, ao detectar sinais de calor ou fumaça incomuns, enviam alertas imediatos para uma central de monitoramento.
+              Gerencie quem entra e sai da sua empresa com tecnologia de ponta. Biometria, reconhecimento facial e automação de acessos.
             </p>
           </div>
           {/* Image Container */}
           <div className="relative h-[400px] lg:h-[600px] w-full bg-gray-50 border border-gray-100">
              <Image
-                src="/sdai_pagina.webp" 
-                alt="Sistema de Detecção e Alarme de Incêndio"
+                src="/sca-pagina.webp" 
+                alt="Sistema de Controle de Acesso"
                 fill
                 className="object-cover opacity-100 grayscale hover:grayscale-0 transition-all duration-300"
              />
@@ -84,15 +84,15 @@ export default function SDAILandingPage() {
             O Cenário Atual
           </h2>
           <h3 className="text-4xl md:text-5xl font-black font-display leading-tight mb-8 uppercase">
-            Ameaça <br/> Silenciosa
+            Acesso <br/> Não Autorizado
           </h3>
           
           <div className="space-y-6 text-gray-400 text-lg leading-relaxed font-sans font-light">
             <p>
-              Incêndios podem começar pequenos e imperceptíveis, mas a velocidade de propagação é exponencial. Em minutos, um foco isolado pode comprometer toda a estrutura do edifício, colocando em risco incalculável vidas humanas e o patrimônio da empresa.
+              O controle manual ou ineficiente de portarias permite a entrada de pessoas não autorizadas, colocando em risco dados, bens e colaboradores.
             </p>
             <p>
-              Sistemas obsoletos ou mal dimensionados geram frequentes alarmes falsos, criando descrédito na brigada e desmobilização desnecessária, além de expor a organização a multas severas por não conformidade com as normas vigentes.
+              Sem registros precisos de horário e identidade, é impossível rastrear incidentes ou garantir a segurança durante o expediente.
             </p>
           </div>
         </div>
@@ -103,18 +103,18 @@ export default function SDAILandingPage() {
             A Solução Centauro
           </h2>
           <h3 className="text-4xl md:text-5xl font-serif italic text-red-700 mb-8 font-bold">
-            Resposta Automática
+            Gestão Inteligente
           </h3>
           
           <p className="text-gray-600 mb-10 text-lg font-sans font-light">
-            Nossos sistemas inteligentes não apenas detectam, mas agem. Eles interagem com o controle de acesso para garantir uma evacuação rápida e segura.
+            Implementamos sistemas integrados de hardware e software para controle total de acessos, com relatórios em tempo real e tecnologias contactless.
           </p>
           <ul className="space-y-6">
             {[
-              "Minimização de alarmes falsos",
-              "Indicação do local exato da emergência",
-              "Abertura automática de catracas e cancelas",
-              "Liberação de portas para rota de fuga"
+              "Reconhecimento Facial e Biometria",
+              "Catracas e Cancelas Automáticas",
+              "Integração com RH e Folha de Ponto",
+              "Gestão de Visitantes em Nuvem"
             ].map((item, i) => (
               <li key={i} className="flex items-start gap-3 group">
                 <CheckCircle2 className="w-6 h-6 text-red-700 shrink-0 mt-1" />
@@ -143,29 +143,29 @@ export default function SDAILandingPage() {
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-white p-10 border border-gray-200 hover:border-red-700 transition-colors duration-300 group">
               <div className="w-12 h-12 bg-red-50 flex items-center justify-center mb-6 group-hover:bg-red-700 transition-colors">
-                <Flame className="w-6 h-6 text-red-700 group-hover:text-white transition-colors" />
+                <Fingerprint className="w-6 h-6 text-red-700 group-hover:text-white transition-colors" />
               </div>
-              <h4 className="text-xl font-bold font-display mb-4 uppercase text-black">Detecção Precisa</h4>
+              <h4 className="text-xl font-bold font-display mb-4 uppercase text-black">Alta Precisão</h4>
               <p className="text-gray-500 text-sm leading-relaxed font-sans">
-                Identificação de sinais de calor ou fumaça incomuns, enviando alertas imediatos para a central.
+                Leitores biométricos de última geração que impedem fraudes e garantem a identidade de cada usuário.
               </p>
             </div>
             <div className="bg-white p-10 border border-gray-200 hover:border-red-700 transition-colors duration-300 group">
               <div className="w-12 h-12 bg-red-50 flex items-center justify-center mb-6 group-hover:bg-red-700 transition-colors">
-                <BellRing className="w-6 h-6 text-red-700 group-hover:text-white transition-colors" />
+                <UserCheck className="w-6 h-6 text-red-700 group-hover:text-white transition-colors" />
               </div>
-              <h4 className="text-xl font-bold font-display mb-4 uppercase text-black">Localização Exata</h4>
+              <h4 className="text-xl font-bold font-display mb-4 uppercase text-black">Fluxo Dinâmico</h4>
               <p className="text-gray-500 text-sm leading-relaxed font-sans">
-                O sistema indica o ponto exato da ocorrência, permitindo uma ação rápida e direcionada da brigada.
+                Entrada e saída ágeis para colaboradores e visitantes, sem filas, mas com total segurança.
               </p>
             </div>
             <div className="bg-white p-10 border border-gray-200 hover:border-red-700 transition-colors duration-300 group">
               <div className="w-12 h-12 bg-red-50 flex items-center justify-center mb-6 group-hover:bg-red-700 transition-colors">
-                <ShieldCheck className="w-6 h-6 text-red-700 group-hover:text-white transition-colors" />
+                <Lock className="w-6 h-6 text-red-700 group-hover:text-white transition-colors" />
               </div>
-              <h4 className="text-xl font-bold font-display mb-4 uppercase text-black">Integração Total</h4>
+              <h4 className="text-xl font-bold font-display mb-4 uppercase text-black">Bloqueio Remoto</h4>
               <p className="text-gray-500 text-sm leading-relaxed font-sans">
-                Interação automática com sistemas de acesso (portas, catracas, cancelas) para facilitar a saída.
+                Capacidade de bloquear acessos instantaneamente em caso de emergência ou desligamento de colaboradores.
               </p>
             </div>
           </div>
@@ -190,13 +190,13 @@ export default function SDAILandingPage() {
            <div className="grid md:grid-cols-3 gap-8 lg:gap-12">
               <div className="border-t-2 border-gray-200 pt-6 group hover:border-red-700 transition-colors duration-300 relative">
                  <span className="text-8xl font-black text-gray-100 absolute -top-8 right-0 -z-10 font-display select-none">01</span>
-                 <h3 className="text-xl font-bold font-display mb-4 uppercase text-black">Vistoria</h3>
-                 <p className="text-gray-500 text-sm font-sans">Análise técnica detalhada das instalações e riscos de incêndio.</p>
+                 <h3 className="text-xl font-bold font-display mb-4 uppercase text-black">Mapeamento</h3>
+                 <p className="text-gray-500 text-sm font-sans">Estudo dos fluxos de pessoas e pontos críticos de acesso.</p>
               </div>
               <div className="border-t-2 border-gray-200 pt-6 group hover:border-red-700 transition-colors duration-300 relative">
                  <span className="text-8xl font-black text-gray-100 absolute -top-8 right-0 -z-10 font-display select-none">02</span>
-                 <h3 className="text-xl font-bold font-display mb-4 uppercase text-black">Projeto</h3>
-                 <p className="text-gray-500 text-sm font-sans">Elaboração de plantas e dimensionamento do sistema conforme normas vigentes.</p>
+                 <h3 className="text-xl font-bold font-display mb-4 uppercase text-black">Instalação</h3>
+                 <p className="text-gray-500 text-sm font-sans">Implementação de catracas, leitores e software de gestão sem interromper a operação.</p>
               </div>
               <div className="border-t-2 border-gray-200 pt-6 group hover:border-red-700 transition-colors duration-300 relative">
                  <span className="text-8xl font-black text-gray-100 absolute -top-8 right-0 -z-10 font-display select-none">03</span>
@@ -221,11 +221,11 @@ export default function SDAILandingPage() {
         
         <div className="container mx-auto px-6 relative z-10">
           <h2 className="text-4xl md:text-5xl font-black font-display uppercase mb-8 leading-tight tracking-tight">
-           PROTEJA O SEU <br />
-           PATRIMÔNIO HOJE
+           CONTROLE TOTAL <br />
+           DO SEU FLUXO
           </h2>
           <p className="text-gray-400 mb-12 max-w-xl mx-auto font-sans text-base">
-            Evite prejuízos irreparáveis. Fale com nossos especialistas em S.D.A.I. e garanta a segurança contra incêndios.
+            Modernize a recepção e segurança da sua empresa. Agende uma demonstração das nossas soluções de SCA.
           </p>
           
           <div className="flex flex-col items-center gap-8">
@@ -247,32 +247,35 @@ export default function SDAILandingPage() {
         className="py-24 bg-white border-t border-gray-100"
       >
          <div className="container mx-auto px-6">
-            <div className="text-center mb-16">
-               <h2 className="text-4xl font-black font-display uppercase tracking-tight text-red-800 mb-4">Parceiros</h2>
-               <p className="text-gray-900 max-w-2xl mx-auto font-sans text-lg">
-                 Trabalhamos com os melhores fabricantes de detecção e alarme do mercado global.
-               </p>
-            </div>
-
+                     <div className="text-center mb-16">
+                        <h2 className="text-4xl font-black font-display uppercase tracking-tight text-red-800 mb-4">Parceiros</h2>
+                        <p className="text-gray-900 max-w-2xl mx-auto font-sans text-lg">
+                          Tecnologia de ponta com os maiores fabricantes de segurança do mundo.
+                        </p>
+                     </div>
+         
             {/* Logo Slider / Grid */}
-            <div className="flex flex-wrap justify-center gap-16 lg:gap-20 items-center">
-               {/* 
-                  NOTE: You need to add these images to your public/logos folder or update the paths.
-               */}
+            <div className="flex flex-wrap justify-center gap-20 lg:gap-32 items-center max-w-5xl mx-auto">
                <div className="relative w-40 h-20 opacity-100 hover:opacity-70 transition-all duration-300 flex items-center justify-center">
-                  <Image src="/logos/simplexOK.webp" alt="Simplex" fill className="object-contain" />
+                  <Image src="/logos/accuraOk.webp" alt="Accura" fill className="object-contain" />
                </div>
                <div className="relative w-40 h-20 opacity-100 hover:opacity-70 transition-all duration-300 flex items-center justify-center">
-                  <Image src="/logos/vesda.webp" alt="Vesda" fill className="object-contain" />
+                  <Image src="/logos/ccureOK.webp" alt="C-Cure" fill className="object-contain" />
                </div>
                <div className="relative w-40 h-20 opacity-100 hover:opacity-70 transition-all duration-300 flex items-center justify-center">
-                  <Image src="/logos/ezalphaOK.webp" alt="Ezalpha" fill className="object-contain" />
+                  <Image src="/logos/controlidOK.webp" alt="Control ID" fill className="object-contain" />
                </div>
                <div className="relative w-40 h-20 opacity-100 hover:opacity-70 transition-all duration-300 flex items-center justify-center">
-                  <Image src="/logos/aritech.webp" alt="Arithec" fill className="object-contain" />
+                  <Image src="/logos/hidOk.webp" alt="HID" fill className="object-contain" />
+               </div>
+               <div className="relative w-40 h-20 opacity-100 hover:opacity-70 transition-all duration-300 flex items-center justify-center">
+                  <Image src="/logos/kantechOK.webp" alt="Kantech" fill className="object-contain" />
+               </div>
+               <div className="relative w-40 h-20 opacity-100 hover:opacity-70 transition-all duration-300 flex items-center justify-center">
+                  <Image src="/logos/lenelOK.webp" alt="Lenel" fill className="object-contain" />
                </div>
             </div>
-         </div>
+                  </div>
       </motion.section>
     </main>
   );

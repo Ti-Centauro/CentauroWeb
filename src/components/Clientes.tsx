@@ -3,16 +3,16 @@ import Marquee from "react-fast-marquee";
 import Image from "next/image";
 
 const logos = [
-  { src: "/logos/globo1.png", alt: "Logo 1" },
-  { src: "/logos/logobraskem.png", alt: "Logo 2" },
-  { src: "/logos/downtown.png", alt: "Logo 3" },
-  { src: "/logos/icon-mprj.png", alt: "Logo 4" },
-  { src: "/logos/subsea7.png", alt: "Logo 5" },
-  { src: "/logos/icon-procter.png", alt: "Logo 6" },
-  { src: "/logos/icon-prudential.png", alt: "Logo 7" },
-  { src: "/logos/sbm.png", alt: "Logo 8" },
-  { src: "/logos/merck.png", alt: "Logo 9" },
-  { src: "/logos/logo_metro.png", alt: "Logo 10" }
+  { src: "/logos/globo1.webp", alt: "Logo 1" },
+  { src: "/logos/logobraskem.webp", alt: "Logo 2" },
+  { src: "/logos/downtown.webp", alt: "Logo 3" },
+  { src: "/logos/icon-mprj.webp", alt: "Logo 4" },
+  { src: "/logos/subsea7.webp", alt: "Logo 5" },
+  { src: "/logos/icon-procter.webp", alt: "Logo 6" },
+  { src: "/logos/icon-prudential.webp", alt: "Logo 7" },
+  { src: "/logos/sbm.webp", alt: "Logo 8" },
+  { src: "/logos/merck.webp", alt: "Logo 9" },
+  { src: "/logos/logo_metro.webp", alt: "Logo 10" }
 ];
 
 export default function Clientes() {
@@ -25,7 +25,7 @@ export default function Clientes() {
       </div>
 
       {/* O gradiente lateral dá o toque profissional de "fading" */}
-      <div className="relative shadow-lg">
+      <div className="relative shadow-md">
         <div className="absolute inset-y-0 left-0 w-20 bg-gradient-to-r from-gray-50 to-transparent z-10" />
         <div className="absolute inset-y-0 right-0 w-20 bg-gradient-to-l from-gray-50 to-transparent z-10" />
 

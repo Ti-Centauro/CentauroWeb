@@ -1,9 +1,9 @@
 'use client';
 import React from "react";
 import { 
-  Flame, 
-  ShieldCheck, 
-  BellRing, 
+  Network, 
+  Server, 
+  Wifi, 
   CheckCircle2
 } from "lucide-react";
 import Link from "next/link"; 
@@ -25,7 +25,7 @@ const staggerContainer: Variants = {
   }
 };
 
-export default function SDAILandingPage() {
+export default function CabeamentoLandingPage() {
   return (
     <main className="min-h-screen bg-white">
       
@@ -39,27 +39,28 @@ export default function SDAILandingPage() {
         variants={fadeInUp}
         className="relative w-full py-24 lg:py-34 bg-white"
       >
-        <div className="container mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
+        {/* AJUSTE AQUI: Mude 60% e 40% para ajustar a divisão da tela (ex: 55%_45%, 50%_50%) */}
+        <div className="container mx-auto px-6 grid lg:grid-cols-[60%_40%] gap-3 items-center">
           <div className="space-y-8">
             <p className="text-xs font-bold tracking-[0.2em] text-red-700 uppercase font-sans">
-              Proteção Contra Incêndio
+              Infraestrutura de TI
             </p>
-            <h1 className="text-6xl md:text-8xl font-black font-display text-black leading-[0.9] tracking-tighter uppercase">
-              SISTEMAS DE <br />
+            <h1 className="text-5xl md:text-7xl lg:text-7xl xl:text-8xl font-black font-display text-black leading-[0.9] tracking-tighter uppercase">
+              CABEAMENTO <br />
               <div className="flex flex-col">
-                <span className="text-black">ALARME E</span>
-                <span className="text-red-800 tracking-[0.01em]">DETECÇÃO</span>
+                <span className="text-red-800">ESTRUTURADO</span>
+                <span className="text-black">E DADOS</span>
               </div>
             </h1>
             <p className="text-gray-600 max-w-md text-lg leading-relaxed border-l-4 border-red-700 pl-6 font-sans">
-              Trabalhamos com os sistemas líderes de indústria que, ao detectar sinais de calor ou fumaça incomuns, enviam alertas imediatos para uma central de monitoramento.
+              Conectividade de alta performance e organização para sua empresa. Redes certificadas que garantem velocidade e estabilidade.
             </p>
           </div>
           {/* Image Container */}
           <div className="relative h-[400px] lg:h-[600px] w-full bg-gray-50 border border-gray-100">
              <Image
-                src="/sdai_pagina.webp" 
-                alt="Sistema de Detecção e Alarme de Incêndio"
+                src="/cabeamento_pagina.webp" 
+                alt="Cabeamento Estruturado"
                 fill
                 className="object-cover opacity-100 grayscale hover:grayscale-0 transition-all duration-300"
              />
@@ -84,15 +85,15 @@ export default function SDAILandingPage() {
             O Cenário Atual
           </h2>
           <h3 className="text-4xl md:text-5xl font-black font-display leading-tight mb-8 uppercase">
-            Ameaça <br/> Silenciosa
+            Rede <br/> Instável
           </h3>
           
           <div className="space-y-6 text-gray-400 text-lg leading-relaxed font-sans font-light">
             <p>
-              Incêndios podem começar pequenos e imperceptíveis, mas a velocidade de propagação é exponencial. Em minutos, um foco isolado pode comprometer toda a estrutura do edifício, colocando em risco incalculável vidas humanas e o patrimônio da empresa.
+              Uma infraestrutura de rede desorganizada causa lentidão, desconexões frequentes e dificuldade de manutenção, impactando diretamente a produtividade da equipe.
             </p>
             <p>
-              Sistemas obsoletos ou mal dimensionados geram frequentes alarmes falsos, criando descrédito na brigada e desmobilização desnecessária, além de expor a organização a multas severas por não conformidade com as normas vigentes.
+              Cabos emaranhados e sem identificação tornam qualquer reparo um pesadelo, aumentando o tempo de inatividade da operação.
             </p>
           </div>
         </div>
@@ -103,18 +104,18 @@ export default function SDAILandingPage() {
             A Solução Centauro
           </h2>
           <h3 className="text-4xl md:text-5xl font-serif italic text-red-700 mb-8 font-bold">
-            Resposta Automática
+            Organização Total
           </h3>
           
           <p className="text-gray-600 mb-10 text-lg font-sans font-light">
-            Nossos sistemas inteligentes não apenas detectam, mas agem. Eles interagem com o controle de acesso para garantir uma evacuação rápida e segura.
+            Além de elaborarmos projetos de redes locais, oferecemos o apoio necessário para a implantação de novos ambientes, dimensionando recursos, equipamentos e serviços:
           </p>
           <ul className="space-y-6">
             {[
-              "Minimização de alarmes falsos",
-              "Indicação do local exato da emergência",
-              "Abertura automática de catracas e cancelas",
-              "Liberação de portas para rota de fuga"
+              "Projetos de Elétrica e CFTV Integrados",
+              "Sonorização de Ambientes Corporativos",
+              "Telefonia VoIP e PABX",
+              "Controle de Acesso de Visitantes e Ponto"
             ].map((item, i) => (
               <li key={i} className="flex items-start gap-3 group">
                 <CheckCircle2 className="w-6 h-6 text-red-700 shrink-0 mt-1" />
@@ -126,7 +127,7 @@ export default function SDAILandingPage() {
       </motion.section>
 
       {/* 
-        DIFFERENTIALS 
+        SERVICES 
       */}
       <motion.section 
         initial="hidden"
@@ -137,36 +138,51 @@ export default function SDAILandingPage() {
       >
         <div className="container mx-auto px-6">
           <div className="text-center mb-20">
-            <h2 className="text-4xl font-black font-display text-black uppercase tracking-tight">Diferenciais Técnicos</h2>
+            <h2 className="text-4xl font-black font-display text-black uppercase tracking-tight">Nossos Serviços</h2>
             <div className="w-16 h-1 bg-red-700 mx-auto mt-6" />
+            <p className="text-gray-600 mt-8 max-w-3xl mx-auto font-sans text-lg">
+              Estamos habituados a trabalhar com bancos, seguradoras, hospitais, supermercados, call-centers, escritórios inteligentes, complexos industriais e outros grandes grupos empresariais.
+            </p>
           </div>
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-white p-10 border border-gray-200 hover:border-red-700 transition-colors duration-300 group">
+          <div className="grid md:grid-cols-3 gap-8 items-start">
+            <div className="bg-white p-8 lg:p-10 border border-gray-200 hover:border-red-700 transition-colors duration-300 group h-full">
               <div className="w-12 h-12 bg-red-50 flex items-center justify-center mb-6 group-hover:bg-red-700 transition-colors">
-                <Flame className="w-6 h-6 text-red-700 group-hover:text-white transition-colors" />
+                <Network className="w-6 h-6 text-red-700 group-hover:text-white transition-colors" />
               </div>
-              <h4 className="text-xl font-bold font-display mb-4 uppercase text-black">Detecção Precisa</h4>
-              <p className="text-gray-500 text-sm leading-relaxed font-sans">
-                Identificação de sinais de calor ou fumaça incomuns, enviando alertas imediatos para a central.
-              </p>
+              <h4 className="text-xl font-bold font-display mb-6 uppercase text-black">Redes Estruturadas</h4>
+              <ul className="text-gray-500 text-sm leading-relaxed font-sans list-disc list-inside space-y-2">
+                <li>Cabeamento de dados, voz e VoIP (CAT5e, CAT6, CAT7)</li>
+                <li>Infraestrutura seca completa (eletrocalhas, dutos, piso elevado)</li>
+                <li>Reestruturação e reinstalação de redes</li>
+                <li>Contratos de manutenção e suporte</li>
+                <li>Projetos executivos, Site Survey e As-Built (AutoCAD)</li>
+                <li>Certificação de pontos (Fluke Networks)</li>
+                <li>Gestão de projetos especiais de Telecom</li>
+              </ul>
             </div>
-            <div className="bg-white p-10 border border-gray-200 hover:border-red-700 transition-colors duration-300 group">
+            <div className="bg-white p-8 lg:p-10 border border-gray-200 hover:border-red-700 transition-colors duration-300 group h-full">
               <div className="w-12 h-12 bg-red-50 flex items-center justify-center mb-6 group-hover:bg-red-700 transition-colors">
-                <BellRing className="w-6 h-6 text-red-700 group-hover:text-white transition-colors" />
+                <Server className="w-6 h-6 text-red-700 group-hover:text-white transition-colors" />
               </div>
-              <h4 className="text-xl font-bold font-display mb-4 uppercase text-black">Localização Exata</h4>
-              <p className="text-gray-500 text-sm leading-relaxed font-sans">
-                O sistema indica o ponto exato da ocorrência, permitindo uma ação rápida e direcionada da brigada.
-              </p>
+              <h4 className="text-xl font-bold font-display mb-6 uppercase text-black">Fibra Óptica</h4>
+              <ul className="text-gray-500 text-sm leading-relaxed font-sans list-disc list-inside space-y-2">
+                <li>Lançamento, fusão e interligação de sites</li>
+                <li>Montagem de DIO e certificação de links</li>
+                <li>Medições com equipamentos próprios (OTDR)</li>
+                <li>Manutenção preventiva e corretiva em backbones</li>
+              </ul>
             </div>
-            <div className="bg-white p-10 border border-gray-200 hover:border-red-700 transition-colors duration-300 group">
+            <div className="bg-white p-8 lg:p-10 border border-gray-200 hover:border-red-700 transition-colors duration-300 group h-full">
               <div className="w-12 h-12 bg-red-50 flex items-center justify-center mb-6 group-hover:bg-red-700 transition-colors">
-                <ShieldCheck className="w-6 h-6 text-red-700 group-hover:text-white transition-colors" />
+                <Wifi className="w-6 h-6 text-red-700 group-hover:text-white transition-colors" />
               </div>
-              <h4 className="text-xl font-bold font-display mb-4 uppercase text-black">Integração Total</h4>
-              <p className="text-gray-500 text-sm leading-relaxed font-sans">
-                Interação automática com sistemas de acesso (portas, catracas, cancelas) para facilitar a saída.
-              </p>
+              <h4 className="text-xl font-bold font-display mb-6 uppercase text-black">Redes Sem Fio</h4>
+              <ul className="text-gray-500 text-sm leading-relaxed font-sans list-disc list-inside space-y-2">
+                <li>Site Survey e planejamento de cobertura</li>
+                <li>Instalação de Wi-Fi Corporativo</li>
+                <li>Otimização de performance e segurança</li>
+                <li>Integração com rede cabeada existente</li>
+              </ul>
             </div>
           </div>
         </div>
@@ -190,13 +206,13 @@ export default function SDAILandingPage() {
            <div className="grid md:grid-cols-3 gap-8 lg:gap-12">
               <div className="border-t-2 border-gray-200 pt-6 group hover:border-red-700 transition-colors duration-300 relative">
                  <span className="text-8xl font-black text-gray-100 absolute -top-8 right-0 -z-10 font-display select-none">01</span>
-                 <h3 className="text-xl font-bold font-display mb-4 uppercase text-black">Vistoria</h3>
-                 <p className="text-gray-500 text-sm font-sans">Análise técnica detalhada das instalações e riscos de incêndio.</p>
+                 <h3 className="text-xl font-bold font-display mb-4 uppercase text-black">Projeto</h3>
+                 <p className="text-gray-500 text-sm font-sans">Dimensionamento de pontos, rotas de cabos e localização de racks.</p>
               </div>
               <div className="border-t-2 border-gray-200 pt-6 group hover:border-red-700 transition-colors duration-300 relative">
                  <span className="text-8xl font-black text-gray-100 absolute -top-8 right-0 -z-10 font-display select-none">02</span>
-                 <h3 className="text-xl font-bold font-display mb-4 uppercase text-black">Projeto</h3>
-                 <p className="text-gray-500 text-sm font-sans">Elaboração de plantas e dimensionamento do sistema conforme normas vigentes.</p>
+                 <h3 className="text-xl font-bold font-display mb-4 uppercase text-black">Lançamento</h3>
+                 <p className="text-gray-500 text-sm font-sans">Passagem de cabos UTP e Fibras seguindo normas de distanciamento e ocupação.</p>
               </div>
               <div className="border-t-2 border-gray-200 pt-6 group hover:border-red-700 transition-colors duration-300 relative">
                  <span className="text-8xl font-black text-gray-100 absolute -top-8 right-0 -z-10 font-display select-none">03</span>
@@ -221,11 +237,11 @@ export default function SDAILandingPage() {
         
         <div className="container mx-auto px-6 relative z-10">
           <h2 className="text-4xl md:text-5xl font-black font-display uppercase mb-8 leading-tight tracking-tight">
-           PROTEJA O SEU <br />
-           PATRIMÔNIO HOJE
+           CONECTE SUA EMPRESA <br />
+           COM O FUTURO
           </h2>
           <p className="text-gray-400 mb-12 max-w-xl mx-auto font-sans text-base">
-            Evite prejuízos irreparáveis. Fale com nossos especialistas em S.D.A.I. e garanta a segurança contra incêndios.
+            Uma rede estável é a base para o crescimento. Solicite um orçamento de cabeamento estruturado hoje mesmo.
           </p>
           
           <div className="flex flex-col items-center gap-8">
@@ -250,26 +266,17 @@ export default function SDAILandingPage() {
             <div className="text-center mb-16">
                <h2 className="text-4xl font-black font-display uppercase tracking-tight text-red-800 mb-4">Parceiros</h2>
                <p className="text-gray-900 max-w-2xl mx-auto font-sans text-lg">
-                 Trabalhamos com os melhores fabricantes de detecção e alarme do mercado global.
+                 Utilizamos materiais de primeira linha das principais marcas do mercado.
                </p>
             </div>
 
             {/* Logo Slider / Grid */}
-            <div className="flex flex-wrap justify-center gap-16 lg:gap-20 items-center">
-               {/* 
-                  NOTE: You need to add these images to your public/logos folder or update the paths.
-               */}
+            <div className="flex flex-wrap justify-center gap-20 lg:gap-32 items-center max-w-5xl mx-auto">
                <div className="relative w-40 h-20 opacity-100 hover:opacity-70 transition-all duration-300 flex items-center justify-center">
-                  <Image src="/logos/simplexOK.webp" alt="Simplex" fill className="object-contain" />
+                  <Image src="/logos/furukawaOK.webp" alt="Furukawa" fill className="object-contain" />
                </div>
                <div className="relative w-40 h-20 opacity-100 hover:opacity-70 transition-all duration-300 flex items-center justify-center">
-                  <Image src="/logos/vesda.webp" alt="Vesda" fill className="object-contain" />
-               </div>
-               <div className="relative w-40 h-20 opacity-100 hover:opacity-70 transition-all duration-300 flex items-center justify-center">
-                  <Image src="/logos/ezalphaOK.webp" alt="Ezalpha" fill className="object-contain" />
-               </div>
-               <div className="relative w-40 h-20 opacity-100 hover:opacity-70 transition-all duration-300 flex items-center justify-center">
-                  <Image src="/logos/aritech.webp" alt="Arithec" fill className="object-contain" />
+                  <Image src="/logos/ciscoOK.webp" alt="Cisco" fill className="object-contain" />
                </div>
             </div>
          </div>

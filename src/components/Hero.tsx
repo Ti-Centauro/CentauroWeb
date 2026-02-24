@@ -21,7 +21,7 @@ interface HeroProps {
 export default function Hero({
   title = "Centauro Engenharia e Informática",
   subtitle = "Oferecemos soluções inteligentes adequadas para cada necessidade.",
-  image = "/hero.png",
+  image = "/hero.webp",
   ctaPrimary = {
     text: "Serviços",
     href: "/servicos",

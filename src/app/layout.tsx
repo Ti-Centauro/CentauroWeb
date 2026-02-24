@@ -1,8 +1,15 @@
+import type { Metadata } from "next";
 import { Inter, Montserrat, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ChatWidget from "@/components/ChatWidget";
+
+export const metadata: Metadata = {
+  icons: {
+    icon: "/logo_centauro.svg",
+  },
+};
 
 const inter = Inter({
   subsets: ["latin"],

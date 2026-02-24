@@ -31,10 +31,17 @@ export default function Footer() {
                     <div>
                         <h3 className="text-lg font-bold mb-6 text-red-800 uppercase tracking-wider">Serviços</h3>
                         <ul className="space-y-3">
-                            {["CFTV", "SDAI", "SCA", "SAI", "Sonorização"].map((item, i) => (
+                            {[
+                                { name: "CFTV", href: "/servicos/cftv" },
+                                { name: "SDAI", href: "/servicos/sdai" },
+                                { name: "SCA", href: "/servicos/sca" },
+                                { name: "SAI", href: "/servicos/sai" },
+                                { name: "Sonorização", href: "/servicos/son" },
+                                { name: "Redes", href: "/servicos/cabeamento-estruturado" },
+                            ].map((item, i) => (
                                 <li key={i}>
-                                    <Link href="" className="text-black hover:text-red-800 hover:font-bold transition-colors text-sm">
-                                        {item}
+                                    <Link href={item.href} className="text-black hover:text-red-800 hover:font-bold transition-colors text-sm">
+                                        {item.name}
                                     </Link>
                                 </li>
                             ))}
