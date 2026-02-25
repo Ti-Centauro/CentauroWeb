@@ -56,49 +56,70 @@ export default function Servicos() {
 
   const x = useTransform(smoothProgress, [0, 1], ["-1%", "-50%"]);
 
- return (
-    // Container principal: Define a altura "fantasma" para rolar (300vh)
-    <section id="Servicos" ref={targetRef} className="relative h-[250vh] bg-neutral-200/50 shadow-lg">
-      
-      {/* Container visual: Fica "preso" na tela enquanto rolamos */}
-      <div className="sticky top-0 flex h-screen items-center overflow-hidden">
-        
-        {/* Título Fixo (opcional, para dar contexto) */}
-        <div className="absolute top-10 left-8 z-20 md:top-20 md:left-16">
-            <h2 className="text-3xl md:text-5xl font-black font-display text-black tracking-tight leading-none mb-8 uppercase">
+  return (
+    <>
+      {/* Mobile: Scroll horizontal simples com toque */}
+      <section id="Servicos" className="md:hidden bg-neutral-200/50 shadow-lg py-12">
+        <div className="px-6 mb-8">
+          <h2 className="text-3xl font-black font-display text-black tracking-tight leading-none uppercase">
+            Nossos <span className="text-red-800">Serviços</span>
+          </h2>
+        </div>
+        <div
+          className="flex gap-4 px-6 overflow-x-auto pb-6 snap-x snap-mandatory"
+          style={{ scrollbarWidth: "none", WebkitOverflowScrolling: "touch" }}
+        >
+          <style jsx>{`
+            div::-webkit-scrollbar { display: none; }
+          `}</style>
+          {services.map((service, index) => (
+            <div key={index} className="snap-start">
+              <Link
+                href={service.href}
+                className="group relative h-[60vh] w-[85vw] overflow-hidden rounded-3xl bg-neutral-800 flex-shrink-0 cursor-pointer block"
+              >
+                <div
+                  className="absolute inset-0 bg-cover bg-center opacity-30"
+                  style={{ backgroundImage: `url(${service.image})` }}
+                />
+                <div className="relative h-full flex flex-col justify-end p-8 z-10">
+                  <h3 className="text-4xl font-bold text-white mb-2">{service.title}</h3>
+                  <p className="text-lg text-gray-300">{service.description}</p>
+                </div>
+              </Link>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Desktop: Scroll-driven parallax animation (original) */}
+      <section ref={targetRef} className="relative h-[250vh] bg-neutral-200/50 shadow-lg hidden md:block">
+        <div className="sticky top-0 flex h-screen items-center overflow-hidden">
+          <div className="absolute top-20 left-16 z-20">
+            <h2 className="text-5xl font-black font-display text-black tracking-tight leading-none mb-8 uppercase">
               Nossos <span className="text-red-800">Serviços</span>
             </h2>
-        </div>
-        {/* A Lista de Cards que se move horizontalmente */}
-        {/* Usamos motion.div e passamos o estilo 'x' calculado antes */}
-        <motion.div style={{ x }} className="flex gap-8 px-8 md:px-16 items-center h-full">
-          
-          {/* Mapeamos os dados para criar os cards */}
-          {services.map((service, index) => {
-            return (
+          </div>
+          <motion.div style={{ x }} className="flex gap-8 px-16 items-center h-full">
+            {services.map((service, index) => (
               <Link
                 key={index}
                 href={service.href}
-                // Mudança Crítica: De pixels fixos (h-[550px]) para Viewport Height (h-[60vh])
-                // Isso garante que o card sempre ocupe 60% da altura da tela de quem está vendo.
-                className="group relative h-[50vh] w-[80vw] md:h-[60vh] md:w-[30vw] min-w-[300px] max-w-[450px] overflow-hidden rounded-3xl bg-neutral-800 flex-shrink-0 cursor-pointer"
+                className="group relative h-[60vh] w-[30vw] min-w-[300px] max-w-[450px] overflow-hidden rounded-3xl bg-neutral-800 flex-shrink-0 cursor-pointer"
               >
-                {/* Imagem de Fundo */}
-                <div 
+                <div
                   className="absolute inset-0 bg-cover bg-center transition-transform duration-600 group-hover:scale-110 opacity-50 group-hover:opacity-40"
                   style={{ backgroundImage: `url(${service.image})` }}
                 />
-                
-                {/* Conteúdo do Card */}
                 <div className="relative h-full flex flex-col justify-end p-8 z-10">
                   <h3 className="text-3xl font-bold text-white mb-2">{service.title}</h3>
                   <p className="text-gray-300">{service.description}</p>
                 </div>
               </Link>
-            );
-          })}
-        </motion.div>
-      </div>
-    </section>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+    </>
   );
 }

@@ -62,8 +62,8 @@ Atendemos exclusivamente o mercado B2B (Empresas), com foco em:
 - Escritórios Corporativos de Médio e Grande Porte.
 
 INFORMAÇÕES DE CONTATO E LOCALIZAÇÃO:
-- Endereço da Sede: Rua da Alfândega, 25 / Sala 402 - Centro, Rio de Janeiro - RJ.
-- CEP: 20070-000.
+- Endereço da Sede: Rua Buenos Aires, 15 - Centro, Rio de Janeiro - RJ.
+- CEP: 20070-021.
 - Telefone Principal: (21) 3176-7900.
 - E-mail Comercial: contato@centaurotelecom.com.br
 - Horário de Funcionamento: Segunda a Sexta, horário comercial (09h às 18h).
