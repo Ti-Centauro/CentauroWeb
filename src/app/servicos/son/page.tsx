@@ -81,7 +81,7 @@ export default function SONLandingPage() {
         className="grid lg:grid-cols-2"
       >
         {/* PROBLEM (Left) */}
-        <div className="bg-black text-white p-12 lg:p-24 flex flex-col justify-start relative lg:h-full border-r-8 border-red-700 py-12 lg:py-24 pr-12 lg:pr-24 pl-8 lg:pl-16">
+        <div className="bg-black text-white p-12 lg:p-24 flex flex-col justify-start relative lg:h-full border-b-8 lg:border-b-0 lg:border-r-8 border-red-700 py-12 lg:py-24 pr-12 lg:pr-24 pl-8 lg:pl-16">
           <h2 className="text-sm font-black text-red-700 mb-6 tracking-widest uppercase font-sans">
             O Cenário Atual
           </h2>
