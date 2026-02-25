@@ -266,7 +266,7 @@ export default function SDAILandingPage() {
                   <Image src="/logos/vesda.webp" alt="Vesda" fill className="object-contain" />
                </div>
                <div className="relative w-40 h-20 opacity-100 hover:opacity-70 transition-all duration-300 flex items-center justify-center">
-                  <Image src="/logos/ezalphaOK.webp" alt="Ezalpha" fill className="object-contain" />
+                  <Image src="/logos/ezalphaOk.webp" alt="Ezalpha" fill className="object-contain" />
                </div>
                <div className="relative w-40 h-20 opacity-100 hover:opacity-70 transition-all duration-300 flex items-center justify-center">
                   <Image src="/logos/aritech.webp" alt="Arithec" fill className="object-contain" />

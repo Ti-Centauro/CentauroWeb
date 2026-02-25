@@ -257,7 +257,7 @@ export default function SCALandingPage() {
             {/* Logo Slider / Grid */}
             <div className="flex flex-wrap justify-center gap-20 lg:gap-32 items-center max-w-5xl mx-auto">
                <div className="relative w-40 h-20 opacity-100 hover:opacity-70 transition-all duration-300 flex items-center justify-center">
-                  <Image src="/logos/accuraOk.webp" alt="Accura" fill className="object-contain" />
+                  <Image src="/logos/accuraOK.webp" alt="Accura" fill className="object-contain" />
                </div>
                <div className="relative w-40 h-20 opacity-100 hover:opacity-70 transition-all duration-300 flex items-center justify-center">
                   <Image src="/logos/ccureOK.webp" alt="C-Cure" fill className="object-contain" />
@@ -266,7 +266,7 @@ export default function SCALandingPage() {
                   <Image src="/logos/controlidOK.webp" alt="Control ID" fill className="object-contain" />
                </div>
                <div className="relative w-40 h-20 opacity-100 hover:opacity-70 transition-all duration-300 flex items-center justify-center">
-                  <Image src="/logos/hidOk.webp" alt="HID" fill className="object-contain" />
+                  <Image src="/logos/hidOK.webp" alt="HID" fill className="object-contain" />
                </div>
                <div className="relative w-40 h-20 opacity-100 hover:opacity-70 transition-all duration-300 flex items-center justify-center">
                   <Image src="/logos/kantechOK.webp" alt="Kantech" fill className="object-contain" />

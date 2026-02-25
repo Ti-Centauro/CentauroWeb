@@ -262,7 +262,7 @@ export default function SONLandingPage() {
                   <Image src="/logos/boschOk.webp" alt="Bosch" fill className="object-contain" />
                </div>
                <div className="relative w-40 h-20 opacity-100 hover:opacity-70 transition-all duration-300 flex items-center justify-center">
-                  <Image src="/logos/apelOk.webp" alt="Apel" fill className="object-contain" />
+                  <Image src="/logos/apelOK.webp" alt="Apel" fill className="object-contain" />
                </div>
             </div>
          </div>
