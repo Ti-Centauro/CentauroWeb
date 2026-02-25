@@ -19,7 +19,7 @@ const servicos = [
   { href: "/servicos/sca", label: "SCA", desc: "Sistema de Controle de Acesso" },
   { href: "/servicos/sdai", label: "SDAI", desc: "Sistema de Detecção e Alarme de Incêndio" },
   { href: "/servicos/sai", label: "SAI", desc: "Sistema de Alerta de Intrusão" },
-  { href: "/servicos/son", label: "SON", desc: "Sistema de Sonorização" },
+  { href: "/servicos/son", label: "SOM", desc: "Sistema de Sonorização" },
   { href: "/servicos/cabeamento-estruturado", label: "REDES", desc: "Cabeamento Estruturado e Dados" },
 ];
 
