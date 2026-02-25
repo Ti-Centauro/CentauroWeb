@@ -32,10 +32,10 @@ export default function Confianca(){
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.2 }}
          >
-            <h2 className="text-4xl md:text-4xl font-display font-bold text-gray-900 leading-tight">Mais de <span className="text-red-800">R$ 5,5 bilhões</span> em patrimônios já contam com as soluções da Centauro.
+            <h2 className="text-2xl md:text-4xl font-display font-bold text-gray-900 leading-tight">Mais de <span className="text-red-800">R$ 5,5 bilhões</span> em patrimônios já contam com as soluções da Centauro.
             </h2>
       <br />
-            <p className="text-gray-800 text-2xl leading-relaxed font-display font-light">
+            <p className="text-gray-800 text-lg md:text-2xl leading-relaxed font-display font-light">
               Nossa expertise garante que sua infraestrutura esteja sempre operando com máxima eficiência, segurança e retorno sobre o investimento.
             </p>
 

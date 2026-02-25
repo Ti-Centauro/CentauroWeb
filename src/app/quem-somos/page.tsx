@@ -39,7 +39,7 @@ export default function QuemSomos() {
             </div>
 
             {/* Title */}
-            <h1 className="text-6xl lg:text-8xl font-black font-display tracking-tighter text-black leading-[0.9] uppercase">
+            <h1 className="text-4xl lg:text-8xl font-black font-display tracking-tighter text-black leading-[0.9] uppercase">
               INOVAÇÃO <br />
               <span className="text-red-700 italic font-serif font-bold">COMPROMISSO</span> <br />
               FUTURO.

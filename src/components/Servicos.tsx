@@ -29,7 +29,7 @@ const services = [
     href: "/servicos/sai"
   },
   {
-    title: "SON",
+    title: "SOM",
     description: "Sistema de Sonorização",
     image: "/servicos/son.webp",
     href: "/servicos/son"

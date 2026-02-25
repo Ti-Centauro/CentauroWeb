@@ -259,10 +259,10 @@ export default function SONLandingPage() {
             {/* Logo Slider / Grid */}
             <div className="flex flex-wrap justify-center gap-20 lg:gap-32 items-center max-w-5xl mx-auto">
                <div className="relative w-40 h-20 opacity-100 hover:opacity-70 transition-all duration-300 flex items-center justify-center">
-                  <Image src="/logos/boschOK.webp" alt="JBL" fill className="object-contain" />
+                  <Image src="/logos/boschOk.webp" alt="Bosch" fill className="object-contain" />
                </div>
                <div className="relative w-40 h-20 opacity-100 hover:opacity-70 transition-all duration-300 flex items-center justify-center">
-                  <Image src="/logos/apelOk.webp" alt="Bose" fill className="object-contain" />
+                  <Image src="/logos/apelOk.webp" alt="Apel" fill className="object-contain" />
                </div>
             </div>
          </div>
