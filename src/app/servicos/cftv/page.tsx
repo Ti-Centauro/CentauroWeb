@@ -45,7 +45,7 @@ export default function CFTVLandingPage() {
             <p className="text-xs font-bold tracking-[0.2em] text-red-700 uppercase font-sans">
               Segurança Integrada
             </p>
-            <h1 className="text-6xl md:text-8xl font-black font-display text-black leading-[0.9] tracking-tighter uppercase">
+            <h1 className="text-4xl md:text-7xl lg:text-7xl xl:text-8xl font-black font-display text-black leading-[0.9] tracking-tighter uppercase">
               SOLUÇÕES <br />
               <div className="flex flex-col">
                 <span className="text-black">EM</span>
@@ -62,7 +62,7 @@ export default function CFTVLandingPage() {
                 src="/cftv_dashboard.webp" 
                 alt="Monitoramento CFTV"
                 fill
-                className="object-cover opacity-90 grayscale hover:grayscale-0 transition-all duration-300"
+                className="object-cover opacity-90 lg:grayscale lg:hover:grayscale-0 transition-all duration-300"
              />
              {/* Decorative element - Keeping the red square as a brand element */}
              <div className="absolute -bottom-8 -left-8 w-16 h-16 bg-red-700" />

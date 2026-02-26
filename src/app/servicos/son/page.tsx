@@ -46,7 +46,7 @@ export default function SONLandingPage() {
             <p className="text-xs font-bold tracking-[0.2em] text-red-700 uppercase font-sans">
               Áudio Profissional
             </p>
-            <h1 className="text-5xl md:text-7xl lg:text-7xl xl:text-8xl font-black font-display text-black leading-[0.9] tracking-tighter uppercase">
+            <h1 className="text-4xl md:text-7xl lg:text-7xl xl:text-8xl font-black font-display text-black leading-[0.9] tracking-tighter uppercase">
               SISTEMA DE <br />
               <div className="flex flex-col">
                 <span className="text-black">SONORIZAÇÃO</span>
@@ -63,7 +63,7 @@ export default function SONLandingPage() {
                 src="/son_pagina2.webp" 
                 alt="Sistema de Sonorização"
                 fill
-                className="object-cover opacity-100 grayscale hover:grayscale-0 transition-all duration-300"
+                className="object-cover opacity-100 lg:grayscale lg:hover:grayscale-0 transition-all duration-300"
              />
              <div className="absolute -bottom-8 -left-8 w-16 h-16 bg-red-700" />
           </div>

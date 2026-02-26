@@ -24,7 +24,7 @@ export default function Hero({
   image = "/hero.webp",
   ctaPrimary = {
     text: "Serviços",
-    href: "/servicos",
+    href: "/#Servicos",
   },
   ctaSecondary,
 }: HeroProps) {

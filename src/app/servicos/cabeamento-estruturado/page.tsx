@@ -45,7 +45,7 @@ export default function CabeamentoLandingPage() {
             <p className="text-xs font-bold tracking-[0.2em] text-red-700 uppercase font-sans">
               Infraestrutura de TI
             </p>
-            <h1 className="text-5xl md:text-7xl lg:text-7xl xl:text-8xl font-black font-display text-black leading-[0.9] tracking-tighter uppercase">
+            <h1 className="text-4xl md:text-7xl lg:text-7xl xl:text-8xl font-black font-display text-black leading-[0.9] tracking-tighter uppercase">
               CABEAMENTO <br />
               <div className="flex flex-col">
                 <span className="text-red-800">ESTRUTURADO</span>
@@ -62,7 +62,7 @@ export default function CabeamentoLandingPage() {
                 src="/cabeamento_pagina.webp" 
                 alt="Cabeamento Estruturado"
                 fill
-                className="object-cover opacity-100 grayscale hover:grayscale-0 transition-all duration-300"
+                className="object-cover opacity-100 lg:grayscale lg:hover:grayscale-0 transition-all duration-300"
              />
              <div className="absolute -bottom-8 -left-8 w-16 h-16 bg-red-700" />
           </div>

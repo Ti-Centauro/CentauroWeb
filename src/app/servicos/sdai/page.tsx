@@ -44,7 +44,7 @@ export default function SDAILandingPage() {
             <p className="text-xs font-bold tracking-[0.2em] text-red-700 uppercase font-sans">
               Proteção Contra Incêndio
             </p>
-            <h1 className="text-6xl md:text-8xl font-black font-display text-black leading-[0.9] tracking-tighter uppercase">
+            <h1 className="text-4xl md:text-7xl lg:text-7xl xl:text-8xl font-black font-display text-black leading-[0.9] tracking-tighter uppercase">
               SISTEMAS DE <br />
               <div className="flex flex-col">
                 <span className="text-black">ALARME E</span>
@@ -61,7 +61,7 @@ export default function SDAILandingPage() {
                 src="/sdai_pagina.webp" 
                 alt="Sistema de Detecção e Alarme de Incêndio"
                 fill
-                className="object-cover opacity-100 grayscale hover:grayscale-0 transition-all duration-300"
+                className="object-cover opacity-100 lg:grayscale lg:hover:grayscale-0 transition-all duration-300"
              />
              <div className="absolute -bottom-8 -left-8 w-16 h-16 bg-red-700" />
           </div>
