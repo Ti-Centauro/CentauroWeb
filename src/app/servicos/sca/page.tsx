@@ -189,17 +189,14 @@ export default function SCALandingPage() {
            </div>
            <div className="grid md:grid-cols-3 gap-8 lg:gap-12">
               <div className="border-t-2 border-gray-200 pt-6 group hover:border-red-700 transition-colors duration-300 relative">
-                 <span className="text-8xl font-black text-gray-100 absolute -top-8 right-0 -z-10 font-display select-none">01</span>
                  <h3 className="text-xl font-bold font-display mb-4 uppercase text-black">Mapeamento</h3>
                  <p className="text-gray-500 text-sm font-sans">Estudo dos fluxos de pessoas e pontos críticos de acesso.</p>
               </div>
               <div className="border-t-2 border-gray-200 pt-6 group hover:border-red-700 transition-colors duration-300 relative">
-                 <span className="text-8xl font-black text-gray-100 absolute -top-8 right-0 -z-10 font-display select-none">02</span>
                  <h3 className="text-xl font-bold font-display mb-4 uppercase text-black">Instalação</h3>
                  <p className="text-gray-500 text-sm font-sans">Implementação de catracas, leitores e software de gestão sem interromper a operação.</p>
               </div>
               <div className="border-t-2 border-gray-200 pt-6 group hover:border-red-700 transition-colors duration-300 relative">
-                 <span className="text-8xl font-black text-gray-100 absolute -top-8 right-0 -z-10 font-display select-none">03</span>
                  <h3 className="text-xl font-bold font-display mb-4 uppercase text-black">Manutenção</h3>
                  <p className="text-gray-500 text-sm font-sans">Cobertura plena com manutenção preventiva e corretiva. Visitas periódicas e reparação de incidências.</p>
               </div>

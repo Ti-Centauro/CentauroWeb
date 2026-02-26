@@ -189,17 +189,14 @@ export default function SDAILandingPage() {
            </div>
            <div className="grid md:grid-cols-3 gap-8 lg:gap-12">
               <div className="border-t-2 border-gray-200 pt-6 group hover:border-red-700 transition-colors duration-300 relative">
-                 <span className="text-8xl font-black text-gray-100 absolute -top-8 right-0 -z-10 font-display select-none">01</span>
                  <h3 className="text-xl font-bold font-display mb-4 uppercase text-black">Vistoria</h3>
                  <p className="text-gray-500 text-sm font-sans">Análise técnica detalhada das instalações e riscos de incêndio.</p>
               </div>
               <div className="border-t-2 border-gray-200 pt-6 group hover:border-red-700 transition-colors duration-300 relative">
-                 <span className="text-8xl font-black text-gray-100 absolute -top-8 right-0 -z-10 font-display select-none">02</span>
                  <h3 className="text-xl font-bold font-display mb-4 uppercase text-black">Projeto</h3>
                  <p className="text-gray-500 text-sm font-sans">Elaboração de plantas e dimensionamento do sistema conforme normas vigentes.</p>
               </div>
               <div className="border-t-2 border-gray-200 pt-6 group hover:border-red-700 transition-colors duration-300 relative">
-                 <span className="text-8xl font-black text-gray-100 absolute -top-8 right-0 -z-10 font-display select-none">03</span>
                  <h3 className="text-xl font-bold font-display mb-4 uppercase text-black">Manutenção</h3>
                  <p className="text-gray-500 text-sm font-sans">Cobertura plena com manutenção preventiva e corretiva. Visitas periódicas e reparação de incidências.</p>
               </div>
