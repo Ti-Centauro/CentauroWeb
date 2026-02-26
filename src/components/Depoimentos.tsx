@@ -96,11 +96,11 @@ export default function Depoimentos() {
                 >
                  
                   <div className="relative z-10 flex flex-col h-full">
-                    <p className="text-xl md:text-2xl font-display text-gray-800 leading-relaxed mb-2 flex-grow">
+                    <p className="text-base md:text-2xl font-display text-gray-800 leading-relaxed mb-2 flex-grow overflow-y-auto">
                       "{testimonials[currentIndex].quote}"
                     </p>
                     
-                    <div className="flex flex-col gap-4 mb-16">
+                    <div className="flex flex-col gap-4 mb-8 md:mb-16">
                       <strong className="text-red-700 text-lg uppercase tracking-wider font-semibold">
                         — {testimonials[currentIndex].company}
                       </strong>
