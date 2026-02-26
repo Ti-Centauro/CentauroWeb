@@ -1,9 +1,9 @@
 'use client';
 
 import Link from "next/link";
-import { motion, Variants } from "framer-motion";
+import { motion, Variants, AnimatePresence } from "framer-motion";
 import { useState, FormEvent } from "react";
-import { Send, Instagram, Linkedin, LayoutDashboard } from "lucide-react";
+import { Send, Instagram, Linkedin, LayoutDashboard, CheckCircle2, XCircle } from "lucide-react";
 import { contactSchema, ContactFormData } from "@/lib/contactSchema";
 
 // Configuração da animação
@@ -12,14 +12,21 @@ const fadeInUp: Variants = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } }
 };
 
+type StatusMessage = {
+  type: 'success' | 'error';
+  text: string;
+} | null;
+
 export default function FaleConosco() {
   const [loading, setLoading] = useState(false);
   const [errors, setErrors] = useState<Partial<Record<keyof ContactFormData, string[]>>>({});
+  const [statusMessage, setStatusMessage] = useState<StatusMessage>(null);
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoading(true);
     setErrors({});
+    setStatusMessage(null);
     
     const formData = new FormData(e.currentTarget);
     const data = Object.fromEntries(formData);
@@ -41,18 +48,17 @@ export default function FaleConosco() {
       const result = await response.json();
       
       if (response.ok) {
-        alert("Mensagem enviada com sucesso!");
+        setStatusMessage({ type: 'success', text: 'Mensagem enviada com sucesso! Entraremos em contato em breve.' });
         (e.target as HTMLFormElement).reset();
       } else {
         if (result.errors) {
           setErrors(result.errors);
         } else {
-          alert("Erro ao enviar: " + (result.message || "Tente novamente."));
+          setStatusMessage({ type: 'error', text: result.message || 'Ocorreu um erro ao enviar sua mensagem. Tente novamente.' });
         }
       }
-    } catch(error) {
-      console.error(error);
-      alert("Erro de conexão.");
+    } catch {
+      setStatusMessage({ type: 'error', text: 'Erro de conexão. Verifique sua internet e tente novamente.' });
     }
     setLoading(false);
   }
@@ -107,6 +113,36 @@ export default function FaleConosco() {
         <div className="lg:col-span-7">
           <h2 className="text-3xl font-black font-display uppercase mb-8 text-black">Envie uma Mensagem</h2>
           
+          {/* Status Message Banner */}
+          <AnimatePresence>
+            {statusMessage && (
+              <motion.div
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -10 }}
+                transition={{ duration: 0.3 }}
+                className={`flex items-center gap-3 p-4 mb-6 border ${
+                  statusMessage.type === 'success' 
+                    ? 'bg-green-50 border-green-200 text-green-800' 
+                    : 'bg-red-50 border-red-200 text-red-800'
+                }`}
+              >
+                {statusMessage.type === 'success' 
+                  ? <CheckCircle2 className="w-5 h-5 shrink-0" /> 
+                  : <XCircle className="w-5 h-5 shrink-0" />
+                }
+                <span className="text-sm font-medium flex-1">{statusMessage.text}</span>
+                <button 
+                  onClick={() => setStatusMessage(null)} 
+                  className="text-current opacity-50 hover:opacity-100 transition-opacity text-lg leading-none"
+                  aria-label="Fechar"
+                >
+                  ×
+                </button>
+              </motion.div>
+            )}
+          </AnimatePresence>
+
           <form onSubmit={handleSubmit} className="space-y-6">
             
             {/* Campo Nome */}
