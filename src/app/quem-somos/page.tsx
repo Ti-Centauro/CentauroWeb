@@ -78,7 +78,7 @@ export default function QuemSomos() {
         {/* Card 2 */}
         <motion.div variants={fadeInUp} className="space-y-4 border-t-2 border-gray-200 pt-6 group hover:border-red-700 transition-colors duration-300">
           <h3 className="text-6xl font-bold font-display text-black">
-            300<span className="text-3xl text-red-700 align-top font-bold">+</span>
+            2000<span className="text-3xl text-red-700 align-top font-bold">+</span>
           </h3>
           <h4 className="text-lg font-semibold uppercase tracking-wider text-black font-sans">Projetos Executados</h4>
           <p className="text-gray-600 leading-relaxed text-sm font-sans font-normal">
@@ -112,7 +112,7 @@ export default function QuemSomos() {
               NOSSA<br />HISTÓRIA<br /><span className="text-red-700">& LEGADO</span>
             </h2>
             <div className="w-16 h-1 bg-black mb-8"></div>
-            <p className="text-lg font-serif italic font-bold text-gray-500 leading-relaxed">
+            <p className="text-lg font-display italic font-medium text-gray-700 leading-relaxed">
               "Não somos apenas provedores de serviço. Somos arquitetos de soluções que moldam o futuro dos negócios."
             </p>
           </div>
@@ -156,7 +156,7 @@ export default function QuemSomos() {
           <div className="flex flex-col gap-6 p-4">
             <h3 className="text-4xl font-black font-display text-black uppercase tracking-tight">Nossa Missão</h3>
             <div className="w-12 h-1 bg-red-700"></div>
-            <p className="text-gray-800 leading-relaxed text-lg font-serif font-bold italic">
+            <p className="text-gray-800 leading-relaxed text-lg font-display font-medium italic">
               "Prover soluções corporativas de alta qualidade, compassivas e tecnológicas que melhorem o bem-estar, independência e qualidade de vida."
             </p>
             <p className="text-gray-600 leading-relaxed text-base text-justify font-sans font-normal">
@@ -168,7 +168,7 @@ export default function QuemSomos() {
           <div className="flex flex-col gap-6 p-4">
             <h3 className="text-4xl font-black font-display text-black uppercase tracking-tight">Nossa Visão</h3>
             <div className="w-12 h-1 bg-red-700"></div>
-            <p className="text-gray-800 leading-relaxed text-lg font-serif font-bold italic">
+            <p className="text-gray-800 leading-relaxed text-lg font-display font-medium italic">
               "Ser o líder incontestável em tecnologia corporativa na região, reconhecido não apenas pela inovação de nossas soluções, mas pelo atendimento humano."
             </p>
             <p className="text-gray-600 leading-relaxed text-base text-justify font-sans font-normal">

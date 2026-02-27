@@ -215,7 +215,6 @@ export default function FaleConosco() {
         </div>
 
         {/* DIREITA: Mapa e Infos (5 Colunas) */}
-        {/* DIREITA: Mapa e Infos (5 Colunas) */}
         {/* Adicionamos h-full e flex-col para ocupar a altura toda se o form for grande */}
         <div className="lg:col-span-5 flex flex-col gap-8 h-full">
            
