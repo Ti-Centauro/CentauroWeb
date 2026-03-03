@@ -232,7 +232,7 @@ export default function FaleConosco() {
            </div>
 
            {/* Informações de Texto */}
-           <div className="bg-gray-50 p-8 border border-gray-100 shrink-0">
+           <div className="bg-white p-8 border border-white shrink-0">
               <h3 className="font-black font-display uppercase tracking-wider text-black mb-4 text-lg">Nosso Escritório</h3>
               <div className="space-y-4 text-gray-600 font-light font-sans">
                 <p>

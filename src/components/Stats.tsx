@@ -65,12 +65,14 @@ export default function Stats() {
   return (
     <section className="bg-gray-50 py-10">
       <div className="w-full px-8 md:px-16">
-        <div className="grid grid-cols-3 md:grid-cols-3 lg:grid-cols-5 gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 md:gap-8">
           
           {statsData.map((item, index) => {
             // Chamamos a mágica para cada item!
             // eslint-disable-next-line react-hooks/rules-of-hooks
             const { count, elementRef } = useCountUp(item.value);
+
+            const isLastOdd = statsData.length % 2 !== 0 && index === statsData.length - 1;
 
             return (
               <motion.div 
@@ -80,9 +82,9 @@ export default function Stats() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 ref={elementRef} 
-                className="flex flex-col items-center text-center group"
+                className={`flex flex-col items-center text-center group ${isLastOdd ? "col-span-2 md:col-span-1" : ""}`}
               >
-                <span className="text-4xl md:text-4xl font-light text-gray-800 tabular-nums">
+                <span className="text-3xl md:text-4xl font-light text-gray-800 tabular-nums">
                   + {count.toLocaleString("pt-BR")}
                 </span>
                 {/* Tracinho que fica vermelho quando passa o mouse */}
