@@ -26,7 +26,7 @@ export async function POST(request: Request) {
     // Envia o email de verdade
     const { data: resendResponseData, error } = await resend.emails.send({
       from: 'suporte@centaurotelecom.com.br',
-      to: 'suporte@centaurotelecom.com.br',
+      to: 'contato@centaurotelecom.com.br',
       subject: `Novo Contato: ${data.name}`,
       html: `
         <h2>Novo contato pelo site!</h2>
