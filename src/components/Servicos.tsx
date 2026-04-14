@@ -92,7 +92,7 @@ export default function Servicos() {
         </div>
       </section>
 
-      {/* Desktop: Scroll-driven parallax animation (original) */}
+      {/* Desktop: Scroll-driven parallax animation (original)a */}
       <section ref={targetRef} className="relative h-[250vh] bg-neutral-200/50 shadow-lg hidden md:block">
         <div className="sticky top-0 flex h-screen items-center overflow-hidden">
           <div className="absolute top-20 left-16 z-20">
