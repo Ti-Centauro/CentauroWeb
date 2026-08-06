@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Inter, Montserrat, Playfair_Display } from "next/font/google";
-import Script from "next/script";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -37,16 +36,14 @@ export default function RootLayout({
 }) {
   const apolloAppId = process.env.NEXT_PUBLIC_APOLLO_APP_ID || "b7s/dw0b1bfb0e3eea9befd";
 
+  const apolloScriptCode = `function initApollo(){var n=Math.random().toString(36).substring(7),o=document.createElement("script");o.src="https://assets.apollo.io/micro/website-tracker/tracker.iife.js?nocache="+n;o.async=!0;o.defer=!0;o.onload=function(){window.trackingFunctions.onLoad({appId:"${apolloAppId}"})};document.head.appendChild(o)}initApollo();`;
+
   return (
     <html lang="pt-br">
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: apolloScriptCode }} />
+      </head>
       <body className={`${inter.variable} ${montserrat.variable} ${playfair.variable} antialiased bg-white`}>
-        <Script
-          id="apollo-tracker"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `function initApollo(){var n=Math.random().toString(36).substring(7),o=document.createElement("script");o.src="https://assets.apollo.io/micro/website-tracker/tracker.iife.js?nocache="+n;o.async=!0;o.defer=!0;o.onload=function(){window.trackingFunctions.onLoad({appId:"${apolloAppId}"})};document.head.appendChild(o)}initApollo();`,
-          }}
-        />
         <Navbar /> {/* Ela fica aqui para aparecer em todas as páginas */}
         {children}
         <Footer />
@@ -55,4 +52,3 @@ export default function RootLayout({
     </html>
   );
 }
-
