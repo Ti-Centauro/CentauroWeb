@@ -136,6 +136,21 @@ export default function Navbar() {
                     </Link>
                   </NavigationMenuLink>
                 </NavigationMenuItem>
+
+                {/* Link simples - ORÇAMENTO */}
+                <NavigationMenuItem>
+                  <NavigationMenuLink asChild>
+                    <Link
+                      href="/orcamento"
+                      className={cn(
+                        "group inline-flex h-9 w-max items-center justify-center px-4 py-2 text-sm font-medium transition-colors disabled:pointer-events-none disabled:opacity-50 text-zinc-950 relative after:absolute after:bottom-0 after:left-4 after:h-[3px] after:bg-red-700 after:transition-all after:duration-300",
+                        pathname === "/orcamento" ? "after:w-[calc(100%-32px)] text-red-700" : "after:w-0 hover:after:w-[calc(100%-32px)] hover:text-red-700"
+                      )}
+                    >
+                      ORÇAMENTO
+                    </Link>
+                  </NavigationMenuLink>
+                </NavigationMenuItem>
               </NavigationMenuList>
             </NavigationMenu>
           </div>
@@ -278,6 +293,17 @@ export default function Navbar() {
             )}
           >
             CLIENTES
+          </Link>
+
+          <Link
+            href="/orcamento"
+            onClick={closeMobile}
+            className={cn(
+              "block px-6 py-3 text-sm font-medium transition-colors",
+              pathname === "/orcamento" ? "text-red-700 bg-red-50" : "text-zinc-800 hover:text-red-700 hover:bg-red-50/50"
+            )}
+          >
+            ORÇAMENTO
           </Link>
         </div>
 

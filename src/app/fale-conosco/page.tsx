@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { motion, Variants, AnimatePresence } from "framer-motion";
 import { useState, FormEvent } from "react";
-import { Send, Instagram, Linkedin, LayoutDashboard, CheckCircle2, XCircle } from "lucide-react";
+import { Send, Instagram, Linkedin, LayoutDashboard, CheckCircle2, XCircle, FileText } from "lucide-react";
 import { contactSchema, ContactFormData } from "@/lib/contactSchema";
 
 // Configuração da animação
@@ -19,7 +19,7 @@ type StatusMessage = {
 
 export default function FaleConosco() {
   const [loading, setLoading] = useState(false);
-  const [errors, setErrors] = useState<Partial<Record<keyof ContactFormData, string[]>>>({});
+  const [errors, setErrors] = useState<Record<string, string[]>>({});
   const [statusMessage, setStatusMessage] = useState<StatusMessage>(null);
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
@@ -28,12 +28,13 @@ export default function FaleConosco() {
     setErrors({});
     setStatusMessage(null);
     
-    const formData = new FormData(e.currentTarget);
+    const formElement = e.currentTarget;
+    const formData = new FormData(formElement);
     const data = Object.fromEntries(formData);
 
     const validation = contactSchema.safeParse(data);
     if (!validation.success) {
-      setErrors(validation.error.flatten().fieldErrors);
+      setErrors(validation.error.flatten().fieldErrors as Record<string, string[]>);
       setLoading(false);
       return;
     }
@@ -47,9 +48,9 @@ export default function FaleConosco() {
       
       const result = await response.json();
       
-      if (response.ok) {
-        setStatusMessage({ type: 'success', text: 'Mensagem enviada com sucesso! Entraremos em contato em breve.' });
-        (e.target as HTMLFormElement).reset();
+      if (response.ok && result.success) {
+        setStatusMessage({ type: 'success', text: result.message || 'Mensagem enviada com sucesso! Entraremos em contato em breve.' });
+        formElement.reset();
       } else {
         if (result.errors) {
           setErrors(result.errors);
@@ -111,6 +112,28 @@ export default function FaleConosco() {
         
         {/* ESQUERDA: Formulário (7 Colunas) */}
         <div className="lg:col-span-7">
+
+          {/* Card de Destaque para Orçamento */}
+          <div className="bg-red-50 border border-red-200 p-6 rounded-lg mb-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+            <div className="flex items-start gap-4">
+              <FileText className="w-8 h-8 text-red-700 shrink-0 mt-1" />
+              <div>
+                <h3 className="text-lg font-bold text-black font-display uppercase">
+                  É empresa e precisa de um orçamento?
+                </h3>
+                <p className="text-sm text-gray-700 font-sans font-light mt-1">
+                  Temos um formulário dedicado para você. Nossa equipe comercial responde em até 1 dia útil.
+                </p>
+              </div>
+            </div>
+            <Link
+              href="/orcamento"
+              className="inline-flex items-center gap-2 bg-red-700 hover:bg-red-800 text-white font-bold text-xs uppercase tracking-wider px-5 py-3 rounded-md transition-all duration-300 shrink-0"
+            >
+              Solicitar Orçamento →
+            </Link>
+          </div>
+
           <h2 className="text-3xl font-black font-display uppercase mb-8 text-black">Envie uma Mensagem</h2>
           
           {/* Status Message Banner */}
@@ -147,57 +170,58 @@ export default function FaleConosco() {
 
             {/* Campo Nome */}
             <div className="space-y-2">
-               <label htmlFor="name" className="text-xs font-bold uppercase tracking-widest text-gray-500">Nome</label>
+               <label htmlFor="nome" className="text-xs font-bold uppercase tracking-widest text-gray-500">Nome</label>
                <input 
                  type="text" 
-                 id="name" 
-                 name="name"
+                 id="nome" 
+                 name="nome"
                  required 
-                 className={`w-full bg-gray-50 border px-4 py-3 text-gray-900 focus:outline-none focus:ring-1 transition-all duration-300 placeholder:text-gray-300 ${errors.name ? 'border-red-500 focus:border-red-500 focus:ring-red-500' : 'border-gray-400 focus:border-red-700 focus:ring-red-700'}`}
+                 className={`w-full bg-gray-50 border px-4 py-3 text-gray-900 focus:outline-none focus:ring-1 transition-all duration-300 placeholder:text-gray-300 ${errors.nome || errors.name ? 'border-red-500 focus:border-red-500 focus:ring-red-500' : 'border-gray-400 focus:border-red-700 focus:ring-red-700'}`}
                  placeholder="Seu nome completo" 
                />
-               {errors.name && <span className="text-red-500 text-xs font-medium">{errors.name[0]}</span>}
+               {(errors.nome || errors.name) && <span className="text-red-500 text-xs font-medium">{(errors.nome || errors.name)?.[0]}</span>}
             </div>
 
-            {/* Grid Email e Telefone */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-               <div className="space-y-2">
-                 <label htmlFor="email" className="text-xs font-bold uppercase tracking-widest text-gray-500">Email</label>
-                 <input 
-                   type="email" 
-                   id="email" 
-                   name="email"
-                   required 
-                   className={`w-full bg-gray-50 border px-4 py-3 text-gray-900 focus:outline-none focus:ring-1 transition-all duration-300 placeholder:text-gray-300 ${errors.email ? 'border-red-500 focus:border-red-500 focus:ring-red-500' : 'border-gray-400 focus:border-red-700 focus:ring-red-700'}`}
-                   placeholder="seu@email.com" 
-                 />
-                 {errors.email && <span className="text-red-500 text-xs font-medium">{errors.email[0]}</span>}
-               </div>
-               <div className="space-y-2">
-                 <label htmlFor="phone" className="text-xs font-bold uppercase tracking-widest text-gray-500">Telefone</label>
-                 <input 
-                   type="tel" 
-                   id="phone" 
-                   name="phone" 
-                   className={`w-full bg-gray-50 border px-4 py-3 text-gray-900 focus:outline-none focus:ring-1 transition-all duration-300 placeholder:text-gray-300 ${errors.phone ? 'border-red-500 focus:border-red-500 focus:ring-red-500' : 'border-gray-400 focus:border-red-700 focus:ring-red-700'}`}
-                   placeholder="(21) 99999-9999" 
-                 />
-                 {errors.phone && <span className="text-red-500 text-xs font-medium">{errors.phone[0]}</span>}
-               </div>
+            {/* Campo Email */}
+            <div className="space-y-2">
+               <label htmlFor="email" className="text-xs font-bold uppercase tracking-widest text-gray-500">Email</label>
+               <input 
+                 type="email" 
+                 id="email" 
+                 name="email"
+                 required 
+                 className={`w-full bg-gray-50 border px-4 py-3 text-gray-900 focus:outline-none focus:ring-1 transition-all duration-300 placeholder:text-gray-300 ${errors.email ? 'border-red-500 focus:border-red-500 focus:ring-red-500' : 'border-gray-400 focus:border-red-700 focus:ring-red-700'}`}
+                 placeholder="seu@email.com" 
+               />
+               {errors.email && <span className="text-red-500 text-xs font-medium">{errors.email[0]}</span>}
+            </div>
+
+            {/* Campo Telefone */}
+            <div className="space-y-2">
+               <label htmlFor="telefone" className="text-xs font-bold uppercase tracking-widest text-gray-500">Telefone</label>
+               <input 
+                 type="tel" 
+                 id="telefone" 
+                 name="telefone" 
+                 required
+                 className={`w-full bg-gray-50 border px-4 py-3 text-gray-900 focus:outline-none focus:ring-1 transition-all duration-300 placeholder:text-gray-300 ${errors.telefone || errors.phone ? 'border-red-500 focus:border-red-500 focus:ring-red-500' : 'border-gray-400 focus:border-red-700 focus:ring-red-700'}`}
+                 placeholder="(21) 99999-9999" 
+               />
+               {(errors.telefone || errors.phone) && <span className="text-red-500 text-xs font-medium">{(errors.telefone || errors.phone)?.[0]}</span>}
             </div>
 
             {/* Campo Mensagem */}
             <div className="space-y-2">
-               <label htmlFor="message" className="text-xs font-bold uppercase tracking-widest text-gray-500">Mensagem</label>
+               <label htmlFor="mensagem" className="text-xs font-bold uppercase tracking-widest text-gray-500">Mensagem</label>
                <textarea 
-                 id="message" 
-                 name="message" 
+                 id="mensagem" 
+                 name="mensagem" 
                  rows={6} 
                  required 
-                 className={`w-full bg-gray-50 border px-4 py-3 text-gray-900 focus:outline-none focus:ring-1 transition-all duration-300 placeholder:text-gray-300 resize-none ${errors.message ? 'border-red-500 focus:border-red-500 focus:ring-red-500' : 'border-gray-400 focus:border-red-700 focus:ring-red-700'}`}
+                 className={`w-full bg-gray-50 border px-4 py-3 text-gray-900 focus:outline-none focus:ring-1 transition-all duration-300 placeholder:text-gray-300 resize-none ${errors.mensagem || errors.message ? 'border-red-500 focus:border-red-500 focus:ring-red-500' : 'border-gray-400 focus:border-red-700 focus:ring-red-700'}`}
                  placeholder="Como podemos ajudar?"
                ></textarea>
-               {errors.message && <span className="text-red-500 text-xs font-medium">{errors.message[0]}</span>}
+               {(errors.mensagem || errors.message) && <span className="text-red-500 text-xs font-medium">{(errors.mensagem || errors.message)?.[0]}</span>}
             </div>
 
             {/* Botão de Envio */}
@@ -213,6 +237,7 @@ export default function FaleConosco() {
             </div>
           </form>
         </div>
+
 
         {/* DIREITA: Mapa e Infos (5 Colunas) */}
         {/* Adicionamos h-full e flex-col para ocupar a altura toda se o form for grande */}
