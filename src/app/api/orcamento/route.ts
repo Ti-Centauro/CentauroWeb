@@ -97,51 +97,6 @@ export async function POST(request: Request) {
       );
     }
 
-    const apiKey = process.env.APOLLO_API_KEY?.trim();
-    if (apiKey && apiKey !== 'sua_api_key_aqui') {
-      try {
-        const nameParts = nome.split(' ');
-        const first_name = nameParts[0] || '';
-        const last_name = nameParts.slice(1).join(' ') || first_name;
-        const apolloPayload: Record<string, unknown> = {
-          first_name,
-          last_name,
-          email,
-          organization_name: empresa,
-          label_names: ['Solicitação de Orçamento'],
-        };
-
-        if (telefone) apolloPayload.direct_phone = telefone;
-
-        const apolloRes = await fetch('https://api.apollo.io/api/v1/contacts', {
-          method: 'POST',
-          signal: AbortSignal.timeout(8000),
-          headers: {
-            'Content-Type': 'application/json',
-            'Cache-Control': 'no-cache',
-            'x-api-key': apiKey,
-          },
-          body: JSON.stringify(apolloPayload),
-        });
-
-        if (!apolloRes.ok) {
-          await apolloRes.body?.cancel();
-          const reason = apolloRes.status === 401
-            ? 'credencial rejeitada'
-            : apolloRes.status === 403
-              ? 'chave sem permissão para criar contatos'
-              : `HTTP ${apolloRes.status}`;
-          console.error('Apollo não salvou o contato:', reason);
-        } else {
-          console.log('Contato de orçamento criado no Apollo.');
-        }
-      } catch (error) {
-        console.error('Falha ao enviar o contato ao Apollo:', error instanceof Error ? error.name : 'erro desconhecido');
-      }
-    } else {
-      console.warn('APOLLO_API_KEY não configurada; e-mail do orçamento foi enviado, mas o CRM não foi atualizado.');
-    }
-
     return NextResponse.json({
       success: true,
       message: 'Solicitação de orçamento enviada com sucesso! Nossa equipe comercial entrará em contato em até 1 dia útil.',
