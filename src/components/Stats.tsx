@@ -88,7 +88,7 @@ export default function Stats() {
                   + {count.toLocaleString("pt-BR")}
                 </span>
                 {/* Tracinho que fica vermelho quando passa o mouse */}
-                <div className="w-8 h-0.5 bg-gray-400 my-4 group-hover:w-35 group-hover:bg-red-700 transition-all duration-300" />
+                <div className="w-8 h-0.5 bg-gray-400 my-4 translate-x-3 group-hover:w-35 group-hover:bg-red-700 transition-all duration-300" />
                 <span className="text-xs font-bold text-gray-500 uppercase tracking-widest">
                   {item.label}
                 </span>

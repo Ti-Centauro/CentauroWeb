@@ -124,7 +124,7 @@ export default function QuemSomos() {
                 Somos a Centauro Engenharia, uma empresa brasileira que atua como integradora de soluções e serviços tecnológicos de ponta. Com mais de uma década de experiência, acreditamos que o sucesso não reside em estruturas gigantescas, mas no cuidado com os detalhes. Cada projeto é tratado com apreço máximo, sendo encarado como um desafio único que exige planejamento minucioso e uma execução pautada pela excelência técnica em todas as etapas.
               </p>
               <p>
-                Ao longo de nossa trajetória, aprendemos que o maior ativo de uma organização é o potencial humano e o conhecimento técnico acumulado. Nossa equipe, composta por mais de 90 colaboradores engajados, baseia sua atuação em pilares fundamentais como a ética, a integridade e a transparência. É através desses valores que honramos a confiança de nossos clientes, garantindo um ambiente de trabalho profissional, seguro e altamente produtivo.
+                Ao longo de nossa trajetória, aprendemos que o maior ativo de uma organização é o potencial humano e o conhecimento técnico acumulado. Nossa equipe, composta por mais de 200 colaboradores engajados, baseia sua atuação em pilares fundamentais como a ética, a integridade e a transparência. É através desses valores que honramos a confiança de nossos clientes, garantindo um ambiente de trabalho profissional, seguro e altamente produtivo.
               </p>
             </div>
             <div className="space-y-6">

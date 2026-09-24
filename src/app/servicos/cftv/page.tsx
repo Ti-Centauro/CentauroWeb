@@ -8,6 +8,7 @@ import {
 } from "lucide-react";
 import Link from "next/link"; 
 import Image from "next/image";
+import Parceiros from "@/components/Parceiros";
 import { motion, Variants } from "framer-motion";
 
 const fadeInUp: Variants = {
@@ -233,50 +234,7 @@ export default function CFTVLandingPage() {
           </div>
         </div>
       </motion.section>
-      {/* 
-        PARTNERS SECTION 
-      */}
-      <motion.section 
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        variants={fadeInUp}
-        className="py-24 bg-white border-t border-gray-100"
-      >
-         <div className="container mx-auto px-6">
-            <div className="text-center mb-16">
-               <h2 className="text-4xl font-black font-display uppercase tracking-tight text-red-800 mb-4">Parceiros</h2>
-               <p className="text-gray-900 max-w-2xl mx-auto font-sans text-lg">
-                 Possuímos parcerias estratégicas com os fabricantes mais reconhecidos do mercado global, garantindo tecnologia de ponta e confiabilidade absoluta para o seu sistema de CFTV.
-               </p>
-            </div>
-
-            {/* Logo Slider / Grid */}
-            <div className="flex flex-wrap justify-center gap-16 lg:gap-20 items-center">
-               {/* 
-                  NOTE: You need to add these images to your public/logos folder or update the paths.
-               */}
-               <div className="relative w-40 h-20 opacity-100 hover:opacity-70 transition-all duration-300 flex items-center justify-center">
-                  <Image src="/logos/americandynamics.webp" alt="American Dynamics" fill className="object-contain" />
-               </div>
-               <div className="relative w-40 h-20 opacity-100 hover:opacity-70 transition-all duration-300 flex items-center justify-center">
-                  <Image src="/logos/illustra.webp" alt="Illustra" fill className="object-contain" />
-               </div>
-               <div className="relative w-40 h-20 opacity-100 hover:opacity-70 transition-all duration-300 flex items-center justify-center">
-                  <Image src="/logos/intelbras.webp" alt="Intelbras" fill className="object-contain" />
-               </div>
-               <div className="relative w-40 h-20 opacity-100 hover:opacity-70 transition-all duration-300 flex items-center justify-center">
-                  <Image src="/logos/hikvision.webp" alt="HIKVISION" fill className="object-contain" />
-               </div>
-               <div className="relative w-40 h-20 opacity-100 hover:opacity-70 transition-all duration-300 flex items-center justify-center">
-                  <Image src="/logos/hanwha.webp" alt="Hanwha" fill className="object-contain" />
-               </div>
-               <div className="relative w-40 h-20 opacity-100 hover:opacity-70 transition-all duration-300 flex items-center justify-center">
-                  <Image src="/logos/interlogix.webp" alt="Interlogix" fill className="object-contain" />
-               </div>
-            </div>
-         </div>
-      </motion.section>
+      <Parceiros servico="cftv" descricao="Possuímos parcerias estratégicas com fabricantes reconhecidos mundialmente para sistemas de CFTV." />
     </main>
   );
 }

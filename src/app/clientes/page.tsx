@@ -67,11 +67,12 @@ export default function Clientes() {
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
             
             {/* Menu de Navegação Horizontal COMPACTO */}
-            <div className="flex flex-nowrap justify-between md:justify-center items-center gap-4 py-6 overflow-x-auto whitespace-nowrap scrollbar-hide">
+            <div className="flex flex-wrap justify-center items-center gap-x-4 gap-y-3 py-6">
                 {CATEGORIAS.map((cat) => (
                 <button
                     key={cat}
                     onClick={() => setFiltroAtivo(cat)}
+                    aria-pressed={filtroAtivo === cat}
                     // Font Montserrat (font-display), Bold (font-bold), Uppercase, 13-14px (text-sm é 14px), tracking 0.05em (tracking-wider)
                     className={`font-display font-bold uppercase tracking-wider text-[10px] md:text-[11px] transition-all duration-300 relative pb-1 flex-shrink-0
                     ${filtroAtivo === cat 

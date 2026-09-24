@@ -8,6 +8,7 @@ import {
 } from "lucide-react";
 import Link from "next/link"; 
 import Image from "next/image";
+import Parceiros from "@/components/Parceiros";
 import { motion, Variants } from "framer-motion";
 
 const fadeInUp: Variants = {
@@ -249,35 +250,7 @@ export default function CabeamentoLandingPage() {
         </div>
       </motion.section>
 
-      {/* 
-        PARTNERS SECTION 
-      */}
-      <motion.section 
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        variants={fadeInUp}
-        className="py-24 bg-white border-t border-gray-100"
-      >
-         <div className="container mx-auto px-6">
-            <div className="text-center mb-16">
-               <h2 className="text-4xl font-black font-display uppercase tracking-tight text-red-800 mb-4">Parceiros</h2>
-               <p className="text-gray-900 max-w-2xl mx-auto font-sans text-lg">
-                 Utilizamos materiais de primeira linha das principais marcas do mercado.
-               </p>
-            </div>
-
-            {/* Logo Slider / Grid */}
-            <div className="flex flex-wrap justify-center gap-20 lg:gap-32 items-center max-w-5xl mx-auto">
-               <div className="relative w-40 h-20 opacity-100 hover:opacity-70 transition-all duration-300 flex items-center justify-center">
-                  <Image src="/logos/furukawaOK.webp" alt="Furukawa" fill className="object-contain" />
-               </div>
-               <div className="relative w-40 h-20 opacity-100 hover:opacity-70 transition-all duration-300 flex items-center justify-center">
-                  <Image src="/logos/ciscoOK.webp" alt="Cisco" fill className="object-contain" />
-               </div>
-            </div>
-         </div>
-      </motion.section>
+      <Parceiros servico="redes" descricao="Utilizamos materiais e equipamentos das principais marcas de infraestrutura de redes." />
     </main>
   );
 }
